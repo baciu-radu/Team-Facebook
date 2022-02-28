@@ -35,17 +35,16 @@ public class MainUI {
             switch (option) {
 
                 case "1":
-                    System.out.println("Log in");
+                    System.out.println("Log in"); //LoginUI TBD here
                     break;
                 case "2":
-                    System.out.println("Forgot password?");
+                    System.out.println("Forgot password?"); //ForgotPasswordUI TBD here
                     break;
                 case "3":
-                    System.out.println("Create new account");
+                    System.out.println("Create new account"); //CreateNewAccountUI TBD here
                     break;
                 case "4":
                     System.exit(0);
-                    break;
                 default:
                     System.err.println("Invalid option");
             }
