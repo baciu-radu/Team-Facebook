@@ -1,0 +1,7 @@
+0;2;Un comentariu haios
+1;1;ce
+2;5;kk
+3;1;ce bine programam noi
+4;1;acuma sigur merge
+5;1;acum merge?
+7;1;merge bre

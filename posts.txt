@@ -1,0 +1,10 @@
+1;1;hahha;3;5
+2;1;hahha;0;0
+3;1;hahha;0;0
+4;1;hahha;0;0
+5;1;hahha;0;1
+6;1;hahha;0;0
+7;1;hahha;0;0
+
+
+
