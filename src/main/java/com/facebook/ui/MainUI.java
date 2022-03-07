@@ -46,6 +46,10 @@ public class MainUI {
                 case "4":
                     System.exit(0);
                     break;
+                case "5":
+                    System.out.println(" Taking you to your account");
+//                    showMainUI();
+//                    showMyProfileUI();
                 default:
                     System.err.println("Invalid option");
             }
