@@ -1,4 +1,4 @@
-package com.facebook.generic;
+package com.facebook.model;
 
 public interface GenericEntity {
 

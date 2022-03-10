@@ -1,7 +1,7 @@
-package com.facebook.comms;
+package com.facebook.dao;
 
-import com.facebook.generic.GenericEntity;
-import com.facebook.generic.GenericRepository;
+import com.facebook.model.GenericEntity;
+import com.facebook.model.Comment;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class CommRepository extends GenericRepository {
+public class CommDao extends GenericDao {
     @Override
     protected List<GenericEntity> get(int n, String filePath) {
         return Collections.emptyList();
@@ -22,7 +22,7 @@ public class CommRepository extends GenericRepository {
         Scanner sc = new Scanner(new File(Comment.COMM_REPOSITORY_PATH));
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
-            if (line.contains(";" + postId + ";")) { // doar daca commentul acesta este a postarii cu id [postId]
+            if (line.contains(";" + postId + ";")) {
                 String[] commAttributes = line.split(";");
                 result.add(new Comment(postId, commAttributes[2]));
             }

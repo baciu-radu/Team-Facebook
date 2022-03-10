@@ -1,6 +1,4 @@
-package com.facebook.posts;
-
-import com.facebook.generic.GenericEntity;
+package com.facebook.model;
 
 public class Post implements GenericEntity {
 
@@ -12,7 +10,6 @@ public class Post implements GenericEntity {
     private int comments;
 
     public Post(){
-
     }
 
     public Post(int id, int userId, String description, int likes, int comments){

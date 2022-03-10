@@ -1,10 +1,12 @@
-package com.facebook.generic;
+package com.facebook.dao;
+
+import com.facebook.model.GenericEntity;
 
 import java.io.*;
 import java.util.List;
 import java.util.Scanner;
 
-public abstract class GenericRepository {
+public abstract class GenericDao {
 
     protected abstract  List<GenericEntity> get(int n, String filePath) throws FileNotFoundException;
 
@@ -19,9 +21,7 @@ public abstract class GenericRepository {
 
     public static void saveEntity(GenericEntity entity) {
 
-//        1. Identificare in ce fisier trebuie salvat entitatea
         String filePath = entity.getStoragePath();
-//        2. Informatia care trebuie salvata
         String dataToSave = entity.toDataBaseFormat()+"\n";
 
         save(filePath, dataToSave, true);

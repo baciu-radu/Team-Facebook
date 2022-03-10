@@ -1,6 +1,4 @@
-package com.facebook.comms;
-
-import com.facebook.generic.GenericEntity;
+package com.facebook.model;
 
 public class Comment implements GenericEntity {
     public static final String COMM_REPOSITORY_PATH = "comments.txt";

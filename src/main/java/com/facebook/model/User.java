@@ -1,6 +1,4 @@
-package com.facebook.user;
-
-import com.facebook.generic.GenericEntity;
+package com.facebook.model;
 
 public class User implements GenericEntity {
 

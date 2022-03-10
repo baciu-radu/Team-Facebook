@@ -1,7 +1,7 @@
-package com.facebook.posts;
+package com.facebook.dao;
 
-import com.facebook.generic.GenericEntity;
-import com.facebook.generic.GenericRepository;
+import com.facebook.model.GenericEntity;
+import com.facebook.model.Post;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class PostsRepository extends GenericRepository {
+public class PostDao extends GenericDao {
 
     @Override
     public List<GenericEntity> get(int n, String filePath) throws FileNotFoundException {
