@@ -1,58 +1,62 @@
 package com.facebook.ui;
 
+import java.awt.*;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-public class MainUI {
+public class MainUI extends UI {
 
-    public void showMainUI () {
+    public void showMainUI () throws AWTException, InterruptedException, IOException {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy");
         String yearDate = dateFormat.format(new Date());
-
+        LoginUI loginUI = new LoginUI();
+        CreateNewAccountUI createNewAccountUI = new CreateNewAccountUI();
+        UI ui = new MainUI();
         Scanner in = new Scanner(System.in);
-        String option = "start";
+        String option = "";
 
         System.out.println("---------------------------------------------------" +
                 "\n" + "facebook" +
                 "\n" +
                 "\n" + "\t\t\t\t" + "1 - Log In" +
-                "\n" + "\t\t\t\t" + "2 - Forgot password?" +
-                "\n" + "\t\t\t\t" + "3 - Create new account" +
-                "\n" + "\t\t\t\t" + "4 - Exit" +
+                "\n" + "\t\t\t\t" + "2 - Create new account" +
+                "\n" + "\t\t\t\t" + "3 - Close" +
                 "\n" +
                 "\n" + "Meta \u00a9 " + yearDate +
                 "\n" + "---------------------------------------------------"
         );
 
-        System.out.println("Select an option (1, 2, 3, 4):");
+        System.out.println("Select an option (1, 2, 3):");
 
-        while (option != "4") {
+        while (option != "3") {
 
-            option = in.next();
+            option = in.nextLine();
 
             switch (option) {
 
                 case "1":
-                    System.out.println("Log in"); //LoginUI TBD here
+                    loginUI.showLoginUI();
                     break;
                 case "2":
-                    System.out.println("Forgot password?"); //ForgotPasswordUI TBD here
+                    createNewAccountUI.showCreateNewAccountUI();
                     break;
                 case "3":
-                    System.out.println("Create new account"); //CreateNewAccountUI TBD here
-                    break;
-                case "4":
-                    System.exit(0);
+                    ui.closeApplication();
                 default:
                     System.err.println("Invalid option");
             }
 
         }
 
+    }
 
-
+    @Override
+    public void closeApplication() {
+        System.out.println("Closing application.");
+        System.exit(0);
     }
 
 }
