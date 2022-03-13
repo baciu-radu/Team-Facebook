@@ -1,17 +1,16 @@
 package com.facebook.service;
 
+import com.facebook.dao.StoreNewAccountData;
 import com.facebook.model.User;
+
+import java.io.IOException;
 
 public class UserService {
 
-    public void createNewAccount (User user) {
+    public void createNewAccount (User user) throws IOException {
 
-        long id = user.getId();
-        String emailAddress = user.getEmailAddress();
-        String password = user.getPassword();
-
-        System.out.println(id + "; " + emailAddress + "; " + password);
-
+        StoreNewAccountData storeNewAccountData = new StoreNewAccountData();
+        storeNewAccountData.writeNewUserDataToDatabase(user);
     }
 
 }
