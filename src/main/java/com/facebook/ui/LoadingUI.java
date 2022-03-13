@@ -37,6 +37,7 @@ public class LoadingUI {
         TimeUnit.MILLISECONDS.sleep(1000);
         loadingUI.click(65 , 825);
         TimeUnit.MILLISECONDS.sleep(1000);
+        loadingUI.click(65 , 900);
 
     }
 
