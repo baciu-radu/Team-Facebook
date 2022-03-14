@@ -8,8 +8,10 @@ public class EditProfileUI extends MyProfileUI {
 //    System("Enter name:");
         System.out.println("Enter name:");
         String name = in.nextLine();
-        System.out.println("Enter name:");
+        System.out.println("Enter age:");
         int age = in.nextInt();
+        System.out.println("Enter sex:");
+        String sex = in.nextLine();
 
     }
 

@@ -28,7 +28,7 @@ public class MainUI {
                 "\n" + "---------------------------------------------------"
         );
 
-        System.out.println("Select an option (1, 2, 3, 4):");
+        System.out.println("Select an option (1, 2, 3, 4, 5):");
 
         while (option != "4") {
 
