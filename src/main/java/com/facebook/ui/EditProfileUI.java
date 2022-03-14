@@ -9,9 +9,21 @@ public class EditProfileUI extends MyProfileUI {
     public static void enterProfileDetails() {
         Scanner in = new Scanner(System.in);
 //    System("Enter name:");
-        System.out.println("Enter name:");
-        String name = in.nextLine();
 
+        // reading name from console
+//        Parser parser = new Parser();
+        boolean matches = false;
+        while (matches == false) {
+            System.out.println("Enter name:");
+            String name = in.nextLine();
+            //  if (name.matches("[A-Za-z]+[ ]+ [A-Za-z]" ) == false) {
+            if (name.matches("[A-Za-z]+[A-Za-z]") == false) {
+                System.out.println("Invalid name, use only characters");
+            } else matches = true;
+        }
+
+
+        // read age from console
         System.out.println("Enter age:");
         Boolean x = false;
         while (x == false) {
@@ -24,7 +36,7 @@ public class EditProfileUI extends MyProfileUI {
         }
 
         SexType sexType;
-        do  {
+        do {
             System.out.print("Enter Sex=");
             String sex = in.next();
             sexType = SexType.fromString(sex);
@@ -33,3 +45,4 @@ public class EditProfileUI extends MyProfileUI {
         String sex = in.nextLine();
     }
 }
+//String emailRegex = "[A-Za-z\\.\\-_]+@\\w+\\.\\w+";
