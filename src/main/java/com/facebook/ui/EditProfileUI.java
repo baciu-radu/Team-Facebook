@@ -1,6 +1,7 @@
 package com.facebook.ui;
 
 import com.facebook.controllers.Numeric;
+import com.facebook.controllers.SexType;
 
 import java.util.Scanner;
 
@@ -21,7 +22,14 @@ public class EditProfileUI extends MyProfileUI {
             } else x = true;
 
         }
-        System.out.println("Enter sex:");
+
+        SexType sexType;
+        do  {
+            System.out.print("Enter Sex=");
+            String sex = in.next();
+            sexType = SexType.fromString(sex);
+        } while (sexType == null);
+
         String sex = in.nextLine();
     }
 }
