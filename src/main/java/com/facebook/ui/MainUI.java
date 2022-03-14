@@ -21,6 +21,7 @@ public class MainUI {
                 "\n" + "\t\t\t\t" + "2 - Forgot password?" +
                 "\n" + "\t\t\t\t" + "3 - Create new account" +
                 "\n" + "\t\t\t\t" + "4 - Exit" +
+                "\n" + "\t\t\t\t" + "5 - Show My Profile" +
                 "\n" +
                 "\n" + "Meta \u00a9 " + yearDate +
                 "\n" + "---------------------------------------------------"
@@ -49,7 +50,7 @@ public class MainUI {
                 case "5":
                     System.out.println(" Taking you to your account");
 //                    showMainUI();
-//                    showMyProfileUI();
+                    MyProfileUI.showMyProfileUI();
                 default:
                     System.err.println("Invalid option");
             }

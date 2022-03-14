@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class MyProfileUI {
 //    public static void main(String[] args) {
 
-        public void showMyProfileUI (){
+        public static void showMyProfileUI(){
         Scanner in = new Scanner(System.in);
         String name = "not assigned";
         int age= 0;
