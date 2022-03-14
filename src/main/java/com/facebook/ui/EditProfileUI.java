@@ -1,5 +1,7 @@
 package com.facebook.ui;
 
+import com.facebook.controllers.Numeric;
+
 import java.util.Scanner;
 
 public class EditProfileUI extends MyProfileUI {
@@ -8,11 +10,18 @@ public class EditProfileUI extends MyProfileUI {
 //    System("Enter name:");
         System.out.println("Enter name:");
         String name = in.nextLine();
+
         System.out.println("Enter age:");
-        int age = in.nextInt();
+        Boolean x = false;
+        while (x == false) {
+            String age = in.nextLine();
+            if (Numeric.isNumeric(age) == false) {
+                System.out.println("Invalid age, please retry using only numbers");
+//
+            } else x = true;
+
+        }
         System.out.println("Enter sex:");
         String sex = in.nextLine();
-
     }
-
 }

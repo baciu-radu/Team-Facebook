@@ -74,7 +74,7 @@ public class MyProfileUI {
 
         System.out.println("----------------------------MY PROFILE ---------------------------");
         System.out.println("\n Name= " + name); // still to create regex
-        System.out.println("\n Age= " + age + "years");  //still create regex - age at account creation must be 18 or higher
+        System.out.println("\n Age= " + age + " years");  //still create regex - age at account creation must be 18 or higher
 //        System.out.println("\n Name= " +email);
         System.out.println("\n Sex= " + sex);  // still to Create enum
 //        System.out.println("\n Name= " + livesIn);
@@ -82,7 +82,7 @@ public class MyProfileUI {
 //        System.out.println("\n Name= " + worksAt);
 //        System.out.println("\n Name= " + studies);
 //        System.out.println("\n Name= " + relationshipStatus);
-        System.out.println("\n Follow By= " + followedBy + "people");// still to create counter
+        System.out.println("\n Follow By= " + followedBy + " people");// still to create counter
 
 
     }
