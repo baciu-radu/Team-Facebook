@@ -2,8 +2,8 @@ package com.facebook.model;
 
 public class User {
 
-    private static long newID = 1;
-    private long id;
+    private static int newID = 1;
+    private int id;
     private String emailAddress;
     private String password;
 
@@ -13,11 +13,11 @@ public class User {
         this.password = password;
     }
 
-    public static long getNewID() {
+    public static int getNewID() {
         return newID;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
@@ -29,11 +29,11 @@ public class User {
         return password;
     }
 
-    public static void setNewID(long newID) {
+    public static void setNewID(int newID) {
         User.newID = newID;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -44,4 +44,6 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
 }

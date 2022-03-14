@@ -12,8 +12,21 @@ public class StoreNewAccountData {
 
     public void writeNewUserDataToDatabase (User user) throws IOException {
 
-        Path path = Paths.get("C:\\Users\\Adrian\\Desktop\\Java Assignments\\Team-Facebook\\src\\main\\java\\com\\facebook\\dao", "UsersTable.txt");
-        Files.write(path, (user.getId() + "; " + user.getEmailAddress() + "; " + user.getPassword() + "\n").getBytes(), StandardOpenOption.APPEND);
+        Path usersTablePath = Paths.get("src\\main\\resources", "UsersTable.txt");
+        Path lastUserIDTable = Paths.get("src\\main\\resources", "LastUserIDTable.txt");
+        String lastUserIDText = Files.readString(lastUserIDTable);
+
+        if ("".equals(lastUserIDText)) {
+
+        }
+        else {
+            int lastUserID = Integer.parseInt(lastUserIDText);
+            lastUserID++;
+            user.setId(lastUserID);
+        }
+
+        Files.write(usersTablePath, (user.getId() + "; " + user.getEmailAddress() + "; " + user.getPassword() + "\n").getBytes(), StandardOpenOption.APPEND);
+        Files.write(lastUserIDTable, String.valueOf(user.getId()).getBytes());
 
     }
 
