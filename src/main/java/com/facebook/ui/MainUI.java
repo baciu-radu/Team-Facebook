@@ -51,8 +51,9 @@ public class MainUI {
                 case "5":
                     System.out.println(" Taking you to your account");
 //                    showMainUI();
-                    MyProfileUI.clearScreen();
+//                    MyProfileUI.clearScreen();
                     MyProfileUI.showMyProfileUI();
+                    break;
 
                 default:
                     System.err.println("Invalid option");
