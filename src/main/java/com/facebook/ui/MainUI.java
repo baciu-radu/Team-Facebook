@@ -1,12 +1,13 @@
 package com.facebook.ui;
 
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
 public class MainUI {
 
-    public void showMainUI () {
+    public void showMainUI ()  {
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy");
         String yearDate = dateFormat.format(new Date());
@@ -50,14 +51,16 @@ public class MainUI {
                 case "5":
                     System.out.println(" Taking you to your account");
 //                    showMainUI();
+                    MyProfileUI.clearScreen();
                     MyProfileUI.showMyProfileUI();
+
                 default:
                     System.err.println("Invalid option");
             }
 
         }
-
-
+    String buffer= in.nextLine();
+//    scanner.close
 
     }
 
