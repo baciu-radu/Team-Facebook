@@ -1,5 +1,6 @@
 package com.facebook.ui;
 
+import com.facebook.controllers.CreateNewAccountController;
 import com.facebook.model.User;
 import com.facebook.service.UserService;
 
@@ -16,25 +17,33 @@ public class CreateNewAccountUI extends UI {
         UI ui = new CreateNewAccountUI();
         UserService userService = new UserService();
         MainUI mainUI = new MainUI();
+        CreateNewAccountController createNewAccountController = new CreateNewAccountController();
         Scanner in = new Scanner(System.in);
 
-        //String firstName = "";
-        //String lastName = "";
         String emailAddress = "";
         String newPassword = "";
 
         loadingUI.popProgressBar();
 
-        //System.out.println("Enter first name:");
-        //firstName = in.nextLine();
-
-        //System.out.println("Enter last name:");
-        //lastName = in.nextLine();
-
         System.out.println("Enter email address:");
         emailAddress = in.nextLine();
+        boolean isAccountValid = createNewAccountController.validateAccount(emailAddress);
+
+        while (!isAccountValid) {
+            System.out.println("Wrong email format. Please provide a valid email address!");
+            emailAddress = in.nextLine();
+            isAccountValid = createNewAccountController.validateAccount(emailAddress);
+        }
 
         newPassword = ui.getMaskedPassword("Enter password");
+        boolean isPasswordValid = createNewAccountController.validatePassword(newPassword);
+
+        while (!isPasswordValid) {
+            System.out.println("Wrong password format." +
+                    "\n" + "The password length must be between 8 - 20 characters and must contain at least 1 capital letter, 1 number and 1 special character.");
+            newPassword = ui.getMaskedPassword("Enter password");
+            isPasswordValid = createNewAccountController.validatePassword(newPassword);
+        }
 
         System.out.println("Press Enter to Sign Up");
         System.in.read();
