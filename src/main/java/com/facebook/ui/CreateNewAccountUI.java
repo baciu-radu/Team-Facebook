@@ -1,6 +1,7 @@
 package com.facebook.ui;
 
 import com.facebook.controllers.CreateNewAccountController;
+import com.facebook.dao.AccountChecker;
 import com.facebook.model.User;
 import com.facebook.service.UserService;
 
@@ -18,6 +19,7 @@ public class CreateNewAccountUI extends UI {
         UserService userService = new UserService();
         MainUI mainUI = new MainUI();
         CreateNewAccountController createNewAccountController = new CreateNewAccountController();
+        AccountChecker accountChecker = new AccountChecker();
         Scanner in = new Scanner(System.in);
 
         String emailAddress = "";
@@ -27,6 +29,7 @@ public class CreateNewAccountUI extends UI {
 
         System.out.println("Enter email address:");
         emailAddress = in.nextLine();
+
         boolean isAccountValid = createNewAccountController.validateAccount(emailAddress);
 
         while (!isAccountValid) {
@@ -35,7 +38,16 @@ public class CreateNewAccountUI extends UI {
             isAccountValid = createNewAccountController.validateAccount(emailAddress);
         }
 
+        boolean isAlreadyExists = accountChecker.checkAccountExists(emailAddress);
+
+        while (isAlreadyExists) {
+            System.out.println("Email address already in use. Please provide a new email address!");
+            emailAddress = in.nextLine();
+            isAlreadyExists = accountChecker.checkAccountExists(emailAddress);
+        }
+
         newPassword = ui.getMaskedPassword("Enter password");
+
         boolean isPasswordValid = createNewAccountController.validatePassword(newPassword);
 
         while (!isPasswordValid) {
