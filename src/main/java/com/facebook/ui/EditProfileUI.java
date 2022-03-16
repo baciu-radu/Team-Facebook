@@ -17,7 +17,7 @@ public class EditProfileUI extends MyProfileUI {
             System.out.println("Enter name:");
             String name = in.nextLine();
             //  if (name.matches("[A-Za-z]+[ ]+ [A-Za-z]" ) == false) {
-            if (name.matches("[A-Za-z]+[A-Za-z]") == false) {
+            if (name.matches("[A-Za-z]+\\s[A-Za-z]+") == false) {
                 System.out.println("Invalid name, use only characters");
             } else matches = true;
         }
