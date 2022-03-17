@@ -60,7 +60,7 @@ public class MainUI {
             }
 
         }
-    String buffer= in.nextLine();
+        String buffer= in.nextLine();
 //    scanner.close
 
     }
