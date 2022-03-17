@@ -33,7 +33,7 @@ public class LoginUI extends UI {
         Radu Code
          */
 //        System.out.println("Successfully logged in. Taking you to your account");
-//        Path idTablePath = Paths.get("src\\main\\resources", "CurrentUserIDTable.txt");
+//        Path idTablePath = Paths.get("src\\main\\resources", "CurrentUserIDTable.txt.txt");
 //        String currentUserIDText = Files.readString(idTablePath);
 //
 //        Files.write(currentUserIDTable, String.valueOf(user.getId()).getBytes());

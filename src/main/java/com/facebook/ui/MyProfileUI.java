@@ -1,5 +1,6 @@
 package com.facebook.ui;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
@@ -14,7 +15,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
-public class MyProfileUI {
+public class MyProfileUI extends UI{
     //    public static void main(String[] args) {
 
     public static void clearScreen() {
@@ -23,7 +24,7 @@ public class MyProfileUI {
     }
 
 
-    public static void showMyProfileUI() {
+    public static void showMyProfileUI() throws IOException {
 //        Runtime.getRuntime().exec("cls");
         Scanner in = new Scanner(System.in);
         MyProfileUI myProfileUI = new MyProfileUI();
@@ -104,6 +105,10 @@ public class MyProfileUI {
 
     }
 
+    @Override
+    public void closeApplication() {
+
+    }
 }
 
 

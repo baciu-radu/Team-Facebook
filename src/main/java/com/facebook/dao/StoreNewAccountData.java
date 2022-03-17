@@ -1,6 +1,7 @@
 package com.facebook.dao;
 
 import com.facebook.model.User;
+import com.facebook.model.UserDetails;
 
 import java.io.IOException;
 import java.nio.file.Files;
