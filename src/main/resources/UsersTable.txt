@@ -1,1 +1,2 @@
 1; radu@mail.com; radupassword
+2; gica@mail.com; gicapassword

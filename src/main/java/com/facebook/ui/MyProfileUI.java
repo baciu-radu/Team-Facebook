@@ -4,6 +4,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+import com.facebook.dao.StoreEditedAccountData;
+import com.facebook.model.User;
+import com.facebook.service.CurrentUserService;
+import com.facebook.service.UserService;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+
 public class MyProfileUI {
     //    public static void main(String[] args) {
 
@@ -17,7 +27,7 @@ public class MyProfileUI {
 //        Runtime.getRuntime().exec("cls");
         Scanner in = new Scanner(System.in);
         MyProfileUI myProfileUI = new MyProfileUI();
-        System.out.println("------------------------------");
+        System.out.println("---------------------------------------------------");
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy");
         String yearDate = dateFormat.format(new Date());
         System.out.println("---------------------------------------------------" +
@@ -48,6 +58,13 @@ public class MyProfileUI {
                 case "2":
                     System.out.println("Edit Profile Details");
                     EditProfileUI.enterProfileDetails();
+                    break;
+                case "3":
+                    System.out.println("Show Profile ID, email and password");
+//                    StoreEditedAccountData.writeUserToDatabase(User user);
+//                    CurrentUserService currentUserService = new CurrentUserService();
+//                    currentUserService.getAccount(User user);
+////                    user.getID();
                     break;
                 default:
                     System.err.println("Invalid option");
