@@ -17,8 +17,9 @@ public class StoreEditedAccountData extends StoreNewAccountData {
         Path idTablePath = Paths.get("src\\main\\resources", "CurrentUserIDTable.txt");
         String currentUserIDText = Files.readString(idTablePath);
 
-        Files.write(idTablePath, (userDetails.getId() + "; " + userDetails.getEmailAddress() + "; " + userDetails.getPassword() + "; " + userDetails.getName() + "; " + userDetails.getAge() + "; " + userDetails.getSex()+ "\n").getBytes(), StandardOpenOption.APPEND);
-
+//        Files.write(idTablePath, (userDetails.getId() + "; " + userDetails.getEmailAddress() + "; " + userDetails.getPassword() + "; " + userDetails.getName() + "; " + userDetails.getAge() + "; " + userDetails.getSex()+ "\n").getBytes(), StandardOpenOption.APPEND);
+        Files.write(profileDetailsTablePath, (userDetails.getId() + "; " + userDetails.getEmailAddress() + "; " + userDetails.getPassword() + "; " + userDetails.getName() + "; " + userDetails.getAge() + "; " + userDetails.getSex()+ "\n").getBytes(), StandardOpenOption.APPEND);
+        Files.write(idTablePath, (userDetails.getId()+";").getBytes(), StandardOpenOption.APPEND);
 
     }
 

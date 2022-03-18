@@ -1,0 +1,3 @@
+17; n@mail.com; npass; N Name; 33; male
+18; a@mail.com; apass; A Name; 44; female
+19; radu@mail.com; radupass; Radu Baciu; 33; male

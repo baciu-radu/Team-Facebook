@@ -62,6 +62,8 @@ public class EditProfileUI extends MyProfileUI {
 //        System.out.println(sexType);
 
 //        String sex = in.nextLine();
+        System.out.println("               0 - Exit");
+        System.out.println("               1 - Show Profile Details");
     }
 }
 //String emailRegex = "[A-Za-z\\.\\-_]+@\\w+\\.\\w+";
