@@ -19,7 +19,7 @@ public class StoreEditedAccountData extends StoreNewAccountData {
 
 //        Files.write(idTablePath, (userDetails.getId() + "; " + userDetails.getEmailAddress() + "; " + userDetails.getPassword() + "; " + userDetails.getName() + "; " + userDetails.getAge() + "; " + userDetails.getSex()+ "\n").getBytes(), StandardOpenOption.APPEND);
         Files.write(profileDetailsTablePath, (userDetails.getId() + "; " + userDetails.getEmailAddress() + "; " + userDetails.getPassword() + "; " + userDetails.getName() + "; " + userDetails.getAge() + "; " + userDetails.getSex()+ "\n").getBytes(), StandardOpenOption.APPEND);
-        Files.write(idTablePath, (userDetails.getId()+";").getBytes(), StandardOpenOption.APPEND);
+        Files.write(idTablePath, (userDetails.getId()+";").getBytes(), StandardOpenOption.WRITE);
 
     }
 
