@@ -1,2 +1,7 @@
 1; radu@mail.com; radupassword
 2; gica@mail.com; gicapassword
+3; create@mail.com; createpassword
+4; test@mail.com; testpassword
+5; test2@mail.com; test2password
+6; Validation@mail.com; Validationpassword
+7; wannabe@mail.com; wannabepassword

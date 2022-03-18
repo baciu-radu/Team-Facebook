@@ -3,9 +3,9 @@ package com.facebook.model;
 public class User {
 
     private static int newID = 1;
-    private int id;
-    private String emailAddress;
-    private String password;
+    private static int id;
+    private static String emailAddress;
+    private static String password;
 
     public User (String emailAddress, String password) {
         this.id = newID++;
@@ -17,15 +17,15 @@ public class User {
         return newID;
     }
 
-    public int getId() {
+    public static int getId() {
         return id;
     }
 
-    public String getEmailAddress() {
+    public static String getEmailAddress() {
         return emailAddress;
     }
 
-    public String getPassword() {
+    public static String getPassword() {
         return password;
     }
 

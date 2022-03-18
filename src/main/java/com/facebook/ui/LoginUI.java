@@ -40,7 +40,12 @@ public class LoginUI extends UI {
 //        Path idTable =User.getNewID();
 //        System.out.println(User.getNewID());
 //
-        MyProfileUI.showMyProfileUI();
+        if (User.getId()==0){
+            System.err.println("Incorrect email or password");
+            MainUI mainUI= new MainUI();
+            mainUI.showMainUI();
+
+        }else MyProfileUI.showMyProfileUI();
         /*
         Radu Code
          */

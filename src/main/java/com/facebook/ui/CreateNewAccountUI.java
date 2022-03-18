@@ -46,8 +46,12 @@ public class CreateNewAccountUI extends UI {
         TimeUnit.MILLISECONDS.sleep(2000);
 
         loadingUI.popProgressBar();
-        mainUI.showMainUI();
+//        mainUI.showMainUI();
+        /* Radu Code
 
+         */
+
+        MyProfileUI.showMyProfileUI();
     }
 
     @Override
