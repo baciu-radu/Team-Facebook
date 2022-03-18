@@ -1,6 +1,5 @@
 package com.facebook.ui;
 
-import com.facebook.controllers.Numeric;
 import com.facebook.model.User;
 
 import java.io.IOException;
@@ -91,22 +90,23 @@ public class MyProfileUI extends UI {
 
 // Read profile from file
         int id = User.getId();
-        System.out.println("ID="+ id);
+//        System.out.println("ID="+ id);
         boolean idCheck = false;
         Path profileDetailsTable = Paths.get("src\\main\\resources", "CurrentUserIDTable.txt");
         List<String> lines = Files.readAllLines(profileDetailsTable);
+        String [] userDetails;
         for (String line : lines) {
-            for (char c : line.toCharArray()) {
-                if ((Numeric.isNumeric(Character.toString(c)) == true) && (c == id)) {
-                    do {
-                        name = name+c;
-                    } while (Character.toString(c)!=";");
-                    System.out.println(name);
+            userDetails = line.split(";");
+            if (userDetails[0].equals(Integer.toString(id))) {
+                System.out.println("----------------------------MY PROFILE ---------------------------");
+                System.out.println("Name = "+ userDetails[3] + "\nAge = " + userDetails[4] + "\nSex = " + userDetails[5]);
 
-                }
             }
         }
-        System.out.println("----------------------------MY PROFILE ---------------------------");
+
+
+
+
         System.out.println("\n Name= " + name); // still to create regex
         System.out.println("\n Age= " + age + " years");  //still create regex - age at account creation must be 18 or higher
 //        System.out.println("\n Name= " +email);
@@ -116,7 +116,7 @@ public class MyProfileUI extends UI {
 //        System.out.println("\n Name= " + worksAt);
 //        System.out.println("\n Name= " + studies);
 //        System.out.println("\n Name= " + relationshipStatus);
-        System.out.println("\n Follow By= " + friendsNo + " people");// still to create counter
+//        System.out.println("\n Follow By= " + friendsNo + " people");// still to create counter
 
 
     }
