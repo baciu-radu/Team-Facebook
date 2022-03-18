@@ -6,6 +6,7 @@ import com.facebook.model.UserDetails;
 import com.facebook.service.EditUserDetailsService;
 import com.facebook.service.UserService;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -31,6 +32,7 @@ public class EditProfileUI extends MyProfileUI {
         while (matches == false) {
             System.out.println("Enter name:");
             name = in.nextLine();
+//            BufferedReader reader = new BufferedReader(new ImputStreamReader(System.in));
             //  if (name.matches("[A-Za-z]+[ ]+ [A-Za-z]" ) == false) {
             if (name.matches("[A-Za-z]+\\s[A-Za-z]+") == false) {
                 System.out.println("Invalid name, use only characters");
