@@ -1,21 +1,18 @@
 package com.facebook.ui;
 
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Scanner;
-
-import com.facebook.dao.StoreEditedAccountData;
+import com.facebook.controllers.Numeric;
 import com.facebook.model.User;
-import com.facebook.service.CurrentUserService;
-import com.facebook.service.UserService;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
 
-public class MyProfileUI extends UI{
+public class MyProfileUI extends UI {
     //    public static void main(String[] args) {
 
     public static void clearScreen() {
@@ -74,22 +71,41 @@ public class MyProfileUI extends UI{
         }
     }
 
-    public static void showProfileDetails() {
+    public static void showProfileDetails() throws IOException {
         Scanner in = new Scanner(System.in);
+
 
         String name = "not assigned";
         int age = 0;
 //        String email="not assigned";
         String sex = "not assigned";
-//        String livesIn = "not assigned";
+        /*String livesIn = "not assigned";
 //        String fromTown = "not assigned";
 //        String worksAt = "not assigned";
 //        String studies = "not assigned";
 //        String relationshipStatus = "not assigned";
-        int followedBy = 0;
+
+         */
+        int friendsNo = 0;
         //add date of join
 
+// Read profile from file
+        int id = User.getId();
+        System.out.println("ID="+ id);
+        boolean idCheck = false;
+        Path profileDetailsTable = Paths.get("src\\main\\resources", "CurrentUserIDTable.txt");
+        List<String> lines = Files.readAllLines(profileDetailsTable);
+        for (String line : lines) {
+            for (char c : line.toCharArray()) {
+                if ((Numeric.isNumeric(Character.toString(c)) == true) && (c == id)) {
+                    do {
+                        name = name+c;
+                    } while (Character.toString(c)!=";");
+                    System.out.println(name);
 
+                }
+            }
+        }
         System.out.println("----------------------------MY PROFILE ---------------------------");
         System.out.println("\n Name= " + name); // still to create regex
         System.out.println("\n Age= " + age + " years");  //still create regex - age at account creation must be 18 or higher
@@ -100,7 +116,7 @@ public class MyProfileUI extends UI{
 //        System.out.println("\n Name= " + worksAt);
 //        System.out.println("\n Name= " + studies);
 //        System.out.println("\n Name= " + relationshipStatus);
-        System.out.println("\n Follow By= " + followedBy + " people");// still to create counter
+        System.out.println("\n Follow By= " + friendsNo + " people");// still to create counter
 
 
     }
