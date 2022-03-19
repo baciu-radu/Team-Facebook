@@ -2,12 +2,16 @@ package com.facebook.ui;
 
 import com.facebook.controllers.Numeric;
 import com.facebook.controllers.SexType;
+import com.facebook.model.ProfileDetails;
 import com.facebook.model.UserDetails;
 import com.facebook.service.EditUserDetailsService;
+import com.facebook.service.ShowProfileDetailsService;
 import com.facebook.service.UserService;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class EditProfileUI extends MyProfileUI {
@@ -17,6 +21,47 @@ public class EditProfileUI extends MyProfileUI {
         EditUserDetailsService editUserDetailsService = new EditUserDetailsService();
         MainUI mainUI = new MainUI();
         Scanner in = new Scanner(System.in);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy");
+        String yearDate = dateFormat.format(new Date());
+        System.out.println("---------------------------------------------------" +
+                "\n" + "facebook - Edit Profile" +
+                "\n" +
+                "\n" + "\t\t\t\t" + "0 - Exit" +
+                "\n" + "\t\t\t\t" + "1 - Name" +
+                "\n" + "\t\t\t\t" + "2 - Age" +
+                "\n" + "\t\t\t\t" + "3 - Sex" +
+                "\n" +
+                "\n" + "Meta \u00a9 " + yearDate +
+                "\n" + "---------------------------------------------------"
+        );
+        System.out.println("---------------What do you want to edit?---------------");
+        String option = "";
+        while (option != "0") {
+
+            option = in.next();
+
+            switch (option) {
+
+                case "0":
+                    System.exit(0);
+                    break;
+                case "1":
+                    System.out.println("Name");
+                    ProfileDetails.getOldName();
+                    System.out.println(ProfileDetails.getOldName());
+                    break;
+                case "2":
+                    System.out.println("Age");
+//                    EditProfileUI.enterProfileDetails();
+                    break;
+                case "3":
+                    System.out.println("Sex");
+                    break;
+                default:
+                    System.err.println("Invalid option");
+            }
+
+        }
         
         String name = null;
         String age = null;

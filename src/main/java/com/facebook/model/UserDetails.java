@@ -2,18 +2,23 @@ package com.facebook.model;
 
 public class UserDetails {
 
+
     private int id;
     private String emailAddress;
     private String password;
-    private String name;
+    private static String name;
+    public static String newName;
     private String age;
+    private String newAge;
     private String sex;
+    private String newSex;
     //        String livesIn = "not assigned";
 //        String fromTown = "not assigned";
 //        String worksAt = "not assigned";
 //        String studies = "not assigned";
 //        String relationshipStatus = "not assigned";
     private int friendsNo;
+    private int newfriendsNo;
 
 
     public UserDetails(String name, String age, String sex) {
@@ -26,8 +31,13 @@ public class UserDetails {
         this.friendsNo = friendsNo;
     }
 
-//    public UserDetails(String name, String age, String sex) {
-//    }
+
+    public void NewUserDetails(String name, String age, String sex) {
+        this.newName = name;
+        this.newAge = age;
+        this.newSex = sex;
+        this.newfriendsNo = friendsNo;
+    }
 
 
     public int getId() {
@@ -55,15 +65,18 @@ public class UserDetails {
         this.password = password;
     }
 
-    public String getName() {        return name;    }
+    public static String getName() {        return name;    }
+    public static String getNewName() {        return newName;    }
 
     public String getAge() {        return age;    }
+
 
     public String getSex() {        return sex;    }
 
     public int getFriendsNo() {        return friendsNo;    }
 
     public void setName(String name) {        this.name = name;    }
+//    public  void setNewName(String name) {        this.newName = name;    }
 
     public void setAge(String age) {        this.age = age;    }
 
