@@ -55,7 +55,7 @@ public class MyProfileUI extends UI {
                     break;
                 case "2":
                     System.out.println("Edit Profile Details");
-                    EditProfileUI.enterProfileDetails();
+                    EditProfileUI.showEditProfileUI();
                     break;
                 case "3":
                     System.out.println("Show Profile ID, email and password");

@@ -2,20 +2,20 @@ package com.facebook.ui;
 
 import com.facebook.controllers.Numeric;
 import com.facebook.controllers.SexType;
+import com.facebook.model.ModifyProfile;
 import com.facebook.model.ProfileDetails;
 import com.facebook.model.UserDetails;
 import com.facebook.service.EditUserDetailsService;
-import com.facebook.service.ShowProfileDetailsService;
-import com.facebook.service.UserService;
+import com.facebook.service.EnterProfileDetailsService;
 
-import java.io.BufferedReader;
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
 public class EditProfileUI extends MyProfileUI {
-    public static void enterProfileDetails() throws IOException {
+    public static void showEditProfileUI() throws IOException {
         LoadingUI loadingUI = new LoadingUI();
         UI ui = new EditProfileUI();
         EditUserDetailsService editUserDetailsService = new EditUserDetailsService();
@@ -48,14 +48,30 @@ public class EditProfileUI extends MyProfileUI {
                 case "1":
                     System.out.println("Name");
                     ProfileDetails.getOldName();
-                    System.out.println(ProfileDetails.getOldName());
+                    EnterProfileDetailsService.enterProfileName();
+                    EnterProfileDetailsService.getNewName();
+                    ModifyProfile.modifyProfile(ProfileDetails.getOldName(),EnterProfileDetailsService.getNewName());
+                    System.out.println("Old name is: " + ProfileDetails.getOldName());
+                    System.out.println("New name is: " + EnterProfileDetailsService.getNewName());
                     break;
                 case "2":
                     System.out.println("Age");
-//                    EditProfileUI.enterProfileDetails();
+                    ProfileDetails.getOldAge();
+                    EnterProfileDetailsService.enterProfileName();
+                    EnterProfileDetailsService.getNewAge();
+                    ModifyProfile.modifyProfile(ProfileDetails.getOldAge(),EnterProfileDetailsService.getNewAge());
+                    System.out.println("Old age is: " + ProfileDetails.getOldAge());
+                    System.out.println("New age is: " + EnterProfileDetailsService.getNewAge());
+
                     break;
                 case "3":
                     System.out.println("Sex");
+                    ProfileDetails.getOldSex();
+                    EnterProfileDetailsService.enterProfileName();
+                    EnterProfileDetailsService.getNewSex();
+                    ModifyProfile.modifyProfile(ProfileDetails.getOldSex(),EnterProfileDetailsService.getNewSex());
+                    System.out.println("Old age is: " + ProfileDetails.getOldSex());
+                    System.out.println("New age is: " + EnterProfileDetailsService.getNewSex());
                     break;
                 default:
                     System.err.println("Invalid option");

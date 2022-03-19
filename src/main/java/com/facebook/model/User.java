@@ -1,5 +1,7 @@
 package com.facebook.model;
 
+import com.facebook.ui.CreateNewAccountUI;
+
 public class User {
 
     private static int newID = 1;

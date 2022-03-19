@@ -30,6 +30,14 @@ public class UserDetails {
         this.sex = sex;
         this.friendsNo = friendsNo;
     }
+//    public void CreateUserDetails(String name, String age, String sex) {
+//        this.id = User.getId();
+//        this.emailAddress = User.getEmailAddress();
+//        this.password = User.getPassword();
+//        this.name = "Not Assigned";
+//        this.age = "Not Assigned";
+//        this.sex = "Not Assigned";
+//        this.friendsNo = 0;
 
 
     public void NewUserDetails(String name, String age, String sex) {

@@ -1,6 +1,10 @@
 package com.facebook.ui;
 
+import com.facebook.dao.StoreEditedAccountData;
 import com.facebook.model.User;
+import com.facebook.model.UserDetails;
+import com.facebook.service.CurrentUserService;
+import com.facebook.service.EditUserDetailsService;
 import com.facebook.service.UserService;
 
 import java.awt.*;
@@ -17,6 +21,8 @@ public class CreateNewAccountUI extends UI {
         UserService userService = new UserService();
         MainUI mainUI = new MainUI();
         Scanner in = new Scanner(System.in);
+        StoreEditedAccountData storeEditedAccountData = new StoreEditedAccountData();
+
 
         //String firstName = "";
         //String lastName = "";
@@ -43,14 +49,15 @@ public class CreateNewAccountUI extends UI {
         userService.createNewAccount(new User(emailAddress, newPassword));
 
         System.out.println("Account successfully created!");
+        /**radu Code
+         *
+         */
+//        NewUserDetailsService.newAccount(new UserDetails("Name Not Assigned"," Age Not Assigned","Sex Not Assigned"));
+        EditUserDetailsService.editAccount(new UserDetails("Name Not Assigned"," Age Not Assigned","Sex Not Assigned"));
         TimeUnit.MILLISECONDS.sleep(2000);
 
         loadingUI.popProgressBar();
 //        mainUI.showMainUI();
-        /* Radu Code
-
-         */
-
         MyProfileUI.showMyProfileUI();
     }
 

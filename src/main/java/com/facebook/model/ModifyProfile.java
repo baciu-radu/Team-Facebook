@@ -5,7 +5,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class ModifyProfile {
-    static void modifyProfile( String oldValue, String newValue){
+    public static void modifyProfile( String oldValue, String newValue){
         Path filePath = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
         String oldContent = "";
         BufferedReader reader = null;

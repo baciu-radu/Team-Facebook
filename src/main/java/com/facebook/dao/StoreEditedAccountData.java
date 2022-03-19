@@ -22,7 +22,10 @@ public class StoreEditedAccountData extends StoreNewAccountData {
         Files.write(idTablePath, (userDetails.getId()+";").getBytes(), StandardOpenOption.WRITE);
 
     }
-
+    public void writeCreateUserDataToDatabase (UserDetails userDetails) throws IOException {
+        Path profileDetailsTablePath = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
+        Files.write(profileDetailsTablePath, (userDetails.getId() + "; " + userDetails.getEmailAddress() + "; " + userDetails.getPassword() + "; " + UserDetails.getName() + "; " + "Age Not Assigned" + "; " + "Sex Not Assigned"+ "\n").getBytes(), StandardOpenOption.APPEND);
+    }
 
 
 }
