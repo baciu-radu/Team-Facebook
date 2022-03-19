@@ -48,3 +48,8 @@
 48; vlad@mail.com; vladpass
 49; fanel@mail.com; fanelpass
 50; ion@mail.com; ionpass
+51; noel@mail.com; noelpass
+52; adela@mail.com; adelapass
+53; dama@mail.com; damapass
+54; marcela@mail.com; marcelapass
+55; ala@mail.com; alapass

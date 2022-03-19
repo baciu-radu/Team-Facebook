@@ -1,6 +1,9 @@
 package com.facebook.ui;
 
+import com.facebook.controllers.UniqueRandomNumbers;
+import com.facebook.model.FindFriends;
 import com.facebook.model.User;
+import com.facebook.service.FindFriendsService;
 import com.facebook.service.ShowProfileDetailsService;
 
 import java.io.IOException;
@@ -35,6 +38,8 @@ public class MyProfileUI extends UI {
                 "\n" + "\t\t\t\t" + "1 - News Feed" +
                 "\n" + "\t\t\t\t" + "2 - Edit Profile" +
                 "\n" + "\t\t\t\t" + "3 - Messenger" +
+                "\n" + "\t\t\t\t" + "4 - Show Friends" +
+                "\n" + "\t\t\t\t" + "5 - Find Friends"+
                 "\n" +
                 "\n" + "Meta \u00a9 " + yearDate +
                 "\n" + "---------------------------------------------------"
@@ -59,6 +64,14 @@ public class MyProfileUI extends UI {
                     break;
                 case "3":
                     System.out.println("Messenger");
+                    break;
+                case "4":
+                    System.out.println("Show Friends");
+                    break;
+                case "5":
+                    System.out.println("Find Friends");
+                    UniqueRandomNumbers.randomGenerator();
+//                    FindFriendsService.getFriends();
                     break;
                 default:
                     System.err.println("Invalid option");
