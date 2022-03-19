@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MyProfileUI extends UI {
-    //    public static void main(String[] args) {
 
     public static void clearScreen() {
         System.out.print("\033[H\033[2J");
@@ -22,7 +21,7 @@ public class MyProfileUI extends UI {
 
 
     public static void showMyProfileUI() throws IOException {
-//        Runtime.getRuntime().exec("cls");
+
         Scanner in = new Scanner(System.in);
         MyProfileUI myProfileUI = new MyProfileUI();
         System.out.println("---------------------------------------------------");
@@ -57,13 +56,6 @@ public class MyProfileUI extends UI {
                 case "2":
                     System.out.println("Edit Profile Details");
                     EditProfileUI.showEditProfileUI();
-                    break;
-                case "3":
-                    System.out.println("Show Profile ID, email and password");
-//                    StoreEditedAccountData.writeUserToDatabase(User user);
-//                    CurrentUserService currentUserService = new CurrentUserService();
-//                    currentUserService.getAccount(User user);
-////                    user.getID();
                     break;
                 default:
                     System.err.println("Invalid option");

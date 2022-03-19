@@ -16,7 +16,6 @@ public class ShowProfileDetailsService {
 
         String name = "not assigned";
         int age = 0;
-//        String email="not assigned";
         String sex = "not assigned";
         /*String livesIn = "not assigned";
 //        String fromTown = "not assigned";
@@ -30,7 +29,6 @@ public class ShowProfileDetailsService {
 
 // Read profile from file
         int id = User.getId();
-//        System.out.println("ID="+ id);
         boolean idCheck = false;
         Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
         List<String> lines = Files.readAllLines(profileDetailsTable);
@@ -38,7 +36,6 @@ public class ShowProfileDetailsService {
         for (String line : lines) {
             userDetails = line.split(";");
             if (userDetails[0].equals(Integer.toString(id))) {
-//                System.out.println("--------------------MY PROFILE --------------------");
                 System.out.println("---------------------------------------------------" +
                         "\n" + "facebook - My Profile"+ "\n"+
                         "---------------------------------------------------");
@@ -48,8 +45,7 @@ public class ShowProfileDetailsService {
         }
 
 
-//        System.out.println("               0 - Exit");
-//        System.out.println("               2 - Edit Profile");
+
 //        System.out.println("\n Name= " + name); // still to create regex
 //        System.out.println("\n Age= " + age + " years");  //still create regex - age at account creation must be 18 or higher
 //        System.out.println("\n Name= " +email);

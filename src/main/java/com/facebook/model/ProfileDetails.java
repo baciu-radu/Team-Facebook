@@ -25,7 +25,6 @@ public class ProfileDetails {
         for (String line : lines) {
             userDetails = line.split(";");
             if (userDetails[0].equals(Integer.toString(id))) {
-//                System.out.println("Name successfully updated");
               oldName= userDetails[3];
 
             }
@@ -43,7 +42,6 @@ public class ProfileDetails {
         for (String line : lines) {
             userDetails = line.split(";");
             if (userDetails[0].equals(Integer.toString(id))) {
-//                System.out.println("Name successfully updated");
                 oldAge= userDetails[4];
 
             }
@@ -58,7 +56,6 @@ public class ProfileDetails {
         for (String line : lines) {
             userDetails = line.split(";");
             if (userDetails[0].equals(Integer.toString(id))) {
-//                System.out.println("Name successfully updated");
                 oldSex= userDetails[5];
 
             }

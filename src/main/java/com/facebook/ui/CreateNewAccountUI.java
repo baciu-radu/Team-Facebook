@@ -24,18 +24,13 @@ public class CreateNewAccountUI extends UI {
         StoreEditedAccountData storeEditedAccountData = new StoreEditedAccountData();
 
 
-        //String firstName = "";
-        //String lastName = "";
+
         String emailAddress = "";
         String newPassword = "";
 
         loadingUI.popProgressBar();
 
-        //System.out.println("Enter first name:");
-        //firstName = in.nextLine();
 
-        //System.out.println("Enter last name:");
-        //lastName = in.nextLine();
 
         System.out.println("Enter email address:");
         emailAddress = in.nextLine();
@@ -52,12 +47,14 @@ public class CreateNewAccountUI extends UI {
         /**radu Code
          *
          */
-//        NewUserDetailsService.newAccount(new UserDetails("Name Not Assigned"," Age Not Assigned","Sex Not Assigned"));
         EditUserDetailsService.editAccount(new UserDetails("Name Not Assigned"," Age Not Assigned","Sex Not Assigned"));
+        /**radu Code
+         *
+         */
         TimeUnit.MILLISECONDS.sleep(2000);
 
         loadingUI.popProgressBar();
-//        mainUI.showMainUI();
+
         MyProfileUI.showMyProfileUI();
     }
 
