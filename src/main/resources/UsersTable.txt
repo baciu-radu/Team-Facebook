@@ -47,3 +47,4 @@
 47; ionica@mail.com; ionicapass
 48; vlad@mail.com; vladpass
 49; fanel@mail.com; fanelpass
+50; ion@mail.com; ionpass

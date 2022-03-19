@@ -32,8 +32,9 @@ public class MyProfileUI extends UI {
                 "\n" + "Option - Menu" +
                 "\n" +
                 "\n" + "\t\t\t\t" + "0 - Exit" +
-                "\n" + "\t\t\t\t" + "1 - Show Profile Details" +
+                "\n" + "\t\t\t\t" + "1 - News Feed" +
                 "\n" + "\t\t\t\t" + "2 - Edit Profile" +
+                "\n" + "\t\t\t\t" + "3 - Messenger" +
                 "\n" +
                 "\n" + "Meta \u00a9 " + yearDate +
                 "\n" + "---------------------------------------------------"
@@ -50,12 +51,14 @@ public class MyProfileUI extends UI {
                     System.exit(0);
                     break;
                 case "1":
-                    System.out.println("Show Profile Details");
-                    ShowProfileDetailsService.showProfileDetails();
+                    System.out.println("News Feed");
                     break;
                 case "2":
                     System.out.println("Edit Profile Details");
                     EditProfileUI.showEditProfileUI();
+                    break;
+                case "3":
+                    System.out.println("Messenger");
                     break;
                 default:
                     System.err.println("Invalid option");

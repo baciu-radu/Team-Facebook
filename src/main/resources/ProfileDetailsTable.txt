@@ -22,3 +22,4 @@ male; monica@mail.com; monipass;Monica Pitica; Age Not Assigned;female
 47; ionica@mail.com; ionicapass;Fanel Motanel;33;male
 48; vlad@mail.com; vladpass;Fanel Motanel;33;male
 49; fanel@mail.com; fanelpass;Fanel Motanel;33;male
+50; ion@mail.com; ionpass; Name Not Assigned;  Age Not Assigned; Sex Not Assigned
