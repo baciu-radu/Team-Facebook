@@ -59,7 +59,7 @@ public class ProfileDetails {
             userDetails = line.split(";");
             if (userDetails[0].equals(Integer.toString(id))) {
 //                System.out.println("Name successfully updated");
-                oldSex= userDetails[4];
+                oldSex= userDetails[5];
 
             }
         }

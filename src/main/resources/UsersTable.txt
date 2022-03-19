@@ -35,3 +35,15 @@
 35; sandel@mail.com; sandelpass
 36; ema@mail.com; ema
 37; mitica@mail.com; miticapass
+38; marcel@mail.com; marcelpass
+39; opa@mail.com; opapass
+40; love@mail.com; lovepass
+41; nicu@mail.com; nicupass
+42; maria@mail.com; mariapass
+43; luci@mail.com; lucipass
+44; ioana@mail.com; ioanapass
+45; bambi@mail.com; bambipass
+46; motanel@mail.com; motanelpass
+47; ionica@mail.com; ionicapass
+48; vlad@mail.com; vladpass
+49; fanel@mail.com; fanelpass

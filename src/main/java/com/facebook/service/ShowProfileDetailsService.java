@@ -38,15 +38,18 @@ public class ShowProfileDetailsService {
         for (String line : lines) {
             userDetails = line.split(";");
             if (userDetails[0].equals(Integer.toString(id))) {
-                System.out.println("----------------------------MY PROFILE ---------------------------");
+//                System.out.println("--------------------MY PROFILE --------------------");
+                System.out.println("---------------------------------------------------" +
+                        "\n" + "facebook - My Profile"+ "\n"+
+                        "---------------------------------------------------");
                 System.out.println("Name = "+ userDetails[3] + "\nAge = " + userDetails[4] + "\nSex = " + userDetails[5]);
 
             }
         }
 
 
-        System.out.println("               0 - Exit");
-        System.out.println("               2 - Edit Profile");
+//        System.out.println("               0 - Exit");
+//        System.out.println("               2 - Edit Profile");
 //        System.out.println("\n Name= " + name); // still to create regex
 //        System.out.println("\n Age= " + age + " years");  //still create regex - age at account creation must be 18 or higher
 //        System.out.println("\n Name= " +email);

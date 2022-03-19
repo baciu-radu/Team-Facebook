@@ -34,7 +34,7 @@ public class EditProfileUI extends MyProfileUI {
                 "\n" + "Meta \u00a9 " + yearDate +
                 "\n" + "---------------------------------------------------"
         );
-        System.out.println("---------------What do you want to edit?---------------");
+        System.out.println("-------------What do you want to edit?-------------");
         String option = "";
         while (option != "0") {
 
@@ -50,81 +50,37 @@ public class EditProfileUI extends MyProfileUI {
                     ProfileDetails.getOldName();
                     EnterProfileDetailsService.enterProfileName();
                     EnterProfileDetailsService.getNewName();
+                    System.out.println("Old name was: " + ProfileDetails.getOldName());
                     ModifyProfile.modifyProfile(ProfileDetails.getOldName(),EnterProfileDetailsService.getNewName());
-                    System.out.println("Old name is: " + ProfileDetails.getOldName());
                     System.out.println("New name is: " + EnterProfileDetailsService.getNewName());
+                    MyProfileUI.showMyProfileUI();
                     break;
                 case "2":
                     System.out.println("Age");
                     ProfileDetails.getOldAge();
-                    EnterProfileDetailsService.enterProfileName();
+                    EnterProfileDetailsService.enterProfileAge();
                     EnterProfileDetailsService.getNewAge();
+                    System.out.println("Old age was: " + ProfileDetails.getOldAge());
                     ModifyProfile.modifyProfile(ProfileDetails.getOldAge(),EnterProfileDetailsService.getNewAge());
-                    System.out.println("Old age is: " + ProfileDetails.getOldAge());
                     System.out.println("New age is: " + EnterProfileDetailsService.getNewAge());
+                    MyProfileUI.showMyProfileUI();
 
                     break;
                 case "3":
                     System.out.println("Sex");
                     ProfileDetails.getOldSex();
-                    EnterProfileDetailsService.enterProfileName();
+                    EnterProfileDetailsService.enterProfileSex();
                     EnterProfileDetailsService.getNewSex();
+                    System.out.println("Old sex was: " + ProfileDetails.getOldSex());
                     ModifyProfile.modifyProfile(ProfileDetails.getOldSex(),EnterProfileDetailsService.getNewSex());
-                    System.out.println("Old age is: " + ProfileDetails.getOldSex());
-                    System.out.println("New age is: " + EnterProfileDetailsService.getNewSex());
+                    System.out.println("New sex is: " + EnterProfileDetailsService.getNewSex());
+                    MyProfileUI.showMyProfileUI();
                     break;
                 default:
                     System.err.println("Invalid option");
             }
 
         }
-        
-        String name = null;
-        String age = null;
-        String sex;
-        
-        
 
-//    System("Enter name:");
-
-        // reading name from console
-//        Parser parser = new Parser();
-        boolean matches = false;
-        while (matches == false) {
-            System.out.println("Enter name:");
-            name = in.nextLine();
-//            BufferedReader reader = new BufferedReader(new ImputStreamReader(System.in));
-            //  if (name.matches("[A-Za-z]+[ ]+ [A-Za-z]" ) == false) {
-            if (name.matches("[A-Za-z]+\\s[A-Za-z]+") == false) {
-                System.out.println("Invalid name, use only characters");
-            } else matches = true;
-        }
-
-
-        // read age from console
-        System.out.println("Enter age:");
-        Boolean x = false;
-        while (x == false) {
-            age = in.nextLine();
-            if (Numeric.isNumeric(age) == false) {
-                System.out.println("Invalid age, please retry using only numbers");
-//
-            } else x = true;
-
-        }
-
-        SexType sexType;
-        do {
-            System.out.print("Enter Sex=");
-            sex = in.next();
-            sexType = SexType.fromString(sex);
-        } while (sexType == null);
-        editUserDetailsService.editAccount(new UserDetails(name, age, sex));
-//        System.out.println(sexType);
-
-//        String sex = in.nextLine();
-        System.out.println("               0 - Exit");
-        System.out.println("               1 - Show Profile Details");
     }
 }
-//String emailRegex = "[A-Za-z\\.\\-_]+@\\w+\\.\\w+";

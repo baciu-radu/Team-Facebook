@@ -26,10 +26,11 @@ public class MyProfileUI extends UI {
         Scanner in = new Scanner(System.in);
         MyProfileUI myProfileUI = new MyProfileUI();
         System.out.println("---------------------------------------------------");
+        ShowProfileDetailsService.showProfileDetails();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy");
         String yearDate = dateFormat.format(new Date());
         System.out.println("---------------------------------------------------" +
-                "\n" + "facebook - My Profile" +
+                "\n" + "Option - Menu" +
                 "\n" +
                 "\n" + "\t\t\t\t" + "0 - Exit" +
                 "\n" + "\t\t\t\t" + "1 - Show Profile Details" +

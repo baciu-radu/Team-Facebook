@@ -1,6 +1,8 @@
 package com.facebook.service;
 
 import com.facebook.controllers.NameController;
+import com.facebook.controllers.Numeric;
+import com.facebook.controllers.SexType;
 import com.facebook.ui.EditProfileUI;
 import com.facebook.ui.LoadingUI;
 import com.facebook.ui.MainUI;
@@ -12,14 +14,16 @@ public class EnterProfileDetailsService {
     public static String newName;
     public static String newAge;
     public static String newSex;
-    public static void enterProfileName(){
-        LoadingUI loadingUI = new LoadingUI();
-        UI ui = new EditProfileUI();
-        EditUserDetailsService editUserDetailsService = new EditUserDetailsService();
-        MainUI mainUI = new MainUI();
-        Scanner in = new Scanner(System.in);
+    LoadingUI loadingUI = new LoadingUI();
+    UI ui = new EditProfileUI();
+    EditUserDetailsService editUserDetailsService = new EditUserDetailsService();
+    MainUI mainUI = new MainUI();
+    public static Scanner in = new Scanner(System.in);
 
-        boolean matches = false;
+
+    //read name from console
+    public static void enterProfileName(){
+              boolean matches = false;
         while (matches == false) {
             System.out.println("Enter name:");
             newName = in.nextLine();
@@ -28,26 +32,37 @@ public class EnterProfileDetailsService {
             } else matches = true;
         }
     }
+
+
+    //read age from console
     public static void enterProfileAge(){
-        LoadingUI loadingUI = new LoadingUI();
-        UI ui = new EditProfileUI();
-        EditUserDetailsService editUserDetailsService = new EditUserDetailsService();
-        MainUI mainUI = new MainUI();
-        Scanner in = new Scanner(System.in);
 
         boolean matches = false;
         while (matches == false) {
             System.out.println("Enter age:");
-            newName = in.nextLine();
-            if (NameController.isName(newName)==false) {
-                System.out.println("Invalid name, use only characters");
+            newAge = in.nextLine();
+            if (Numeric.isNumeric(newAge)==false) {
+                System.out.println("Invalid age, use only numbers");
             } else matches = true;
         }
     }
+
+
+    //read age from console
+    public static void enterProfileSex(){
+
+        SexType sexType;
+        do {
+            System.out.print("Enter Sex=");
+            newSex = in.next();
+            sexType = SexType.fromString(newSex);
+        } while (sexType == null);
+    }
+
+
     public static String getNewName(){
         return newName;
     }
-
     public static String getNewAge() {
         return newAge;
     }

@@ -1,12 +1,24 @@
-317; n@mail.com; npass; N Name; 33; male
+317; n@mail.com; npass; N Name; male; male
 18; a@mail.com; apass; A Name; 44; female
-19; radu@mail.com; radupass; Radu Baciu; 33; male
+19; radu@mail.com; radupass; Radu Baciu; male; male
 21; gigi@mail.com; gigipass; Gigi Name; 44; male
-22; fds@mail.com; dsadas; FFFF fsd; 33; male
+22; fds@mail.com; dsadas; FFFF fsd; male; male
 23; dsaas; dasad; Fsdas Fadsa; 22; male
 24; ionel@mail.com; ionelpass; Ionel Popesci; 43; male
 31; nana@mail.com; nanapass;Nana Lana;Nana Lana;Nana Lana
-33; monica@mail.com; monipass;Monica Pitica; Age Not Assigned; Sex Not Assigned
-35; sandel@mail.com; sandelpass;Ema Crema; Age Not Assigned; Sex Not Assigned
-36; ema@mail.com; ema;Ema Crema;  Age Not Assigned; Sex Not Assigned
-37; mitica@mail.com; miticapass;Mitica Dragomir;  Age Not Assigned; Sex Not Assigned
+male; monica@mail.com; monipass;Monica Pitica; Age Not Assigned;female
+35; sandel@mail.com; sandelpass;Ema Crema; Age Not Assigned;female
+36; ema@mail.com; ema;Ema Crema;male;female
+37; mitica@mail.com; miticapass;Mitica Dragomir;male;female
+38; marcel@mail.com; marcelpass;Marcel Voinicel;male;female
+39; opa@mail.com; opapass;Love Boy;male;female
+40; love@mail.com; lovepass;Love Boy;male;female
+41; nicu@mail.com; nicupass;Nicu Piticu;male;female
+42; maria@mail.com; mariapass;Maria JosPalaria;30;female
+43; luci@mail.com; lucipass;Lucian Clapa;30;female
+44; ioana@mail.com; ioanapass;Ioana Clapa;29;female
+45; bambi@mail.com; bambipass;Bambi Caprioara;12;female
+46; motanel@mail.com; motanelpass;Fanel Motanel;33;male
+47; ionica@mail.com; ionicapass;Fanel Motanel;33;male
+48; vlad@mail.com; vladpass;Fanel Motanel;33;male
+49; fanel@mail.com; fanelpass;Fanel Motanel;33;male

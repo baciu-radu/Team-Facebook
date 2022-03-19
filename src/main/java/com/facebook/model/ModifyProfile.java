@@ -24,7 +24,7 @@ public class ModifyProfile {
                 oldContent = oldContent + line + System.lineSeparator();
 
                 line = reader.readLine();
-                System.err.println(line);
+//                System.err.println(line);
             }
 
             //Replacing oldString with newString in the oldContent
