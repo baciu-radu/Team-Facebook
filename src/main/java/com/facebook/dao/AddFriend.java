@@ -19,8 +19,9 @@ public class AddFriend {
             Files.write(friendListTablePath, (currentUserID + ";" + friendToAdd + ";"+"\n").getBytes(), StandardOpenOption.APPEND);
 
         } else {
-            String addFriend = Integer.toString(friendToAdd).concat(";");
-            ModifyProfile.modifyProfile(GetOldFriendList.getOldFriendList(), addFriend);
+            String addFriend = GetOldFriendList.getOldFriendList() + Integer.toString(friendToAdd).concat(";");
+//            String addFriend = friendToAdd.concat(";");
+            ModifyProfile.modifyFriends(GetOldFriendList.getOldFriendList(), addFriend);
 
         }
 

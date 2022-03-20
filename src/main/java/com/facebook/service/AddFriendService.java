@@ -9,6 +9,7 @@ public class AddFriendService {
     public static void addFriend() throws IOException {
         Scanner in = new Scanner(System.in);
         int friendToAdd = in.nextInt();
+//        String friendToAdd = in.nextLine();
         AddFriend.writeFriendToList(friendToAdd);
         System.out.println("Friend Successfully Added To Your FriendList");
     }
