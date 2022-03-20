@@ -47,7 +47,7 @@ public class EditProfileUI extends MyProfileUI {
                     break;
                 case "1":
                     System.out.println("Name");
-                    ProfileDetails.getOldName();
+
                     EnterProfileDetailsService.enterProfileName();
                     EnterProfileDetailsService.getNewName();
                     System.out.println("Old name was: " + ProfileDetails.getOldName());
@@ -57,7 +57,7 @@ public class EditProfileUI extends MyProfileUI {
                     break;
                 case "2":
                     System.out.println("Age");
-                    ProfileDetails.getOldAge();
+
                     EnterProfileDetailsService.enterProfileAge();
                     EnterProfileDetailsService.getNewAge();
                     System.out.println("Old age was: " + ProfileDetails.getOldAge());
@@ -68,7 +68,7 @@ public class EditProfileUI extends MyProfileUI {
                     break;
                 case "3":
                     System.out.println("Sex");
-                    ProfileDetails.getOldSex();
+
                     EnterProfileDetailsService.enterProfileSex();
                     EnterProfileDetailsService.getNewSex();
                     System.out.println("Old sex was: " + ProfileDetails.getOldSex());

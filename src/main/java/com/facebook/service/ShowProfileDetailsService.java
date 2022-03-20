@@ -4,10 +4,6 @@ import com.facebook.controllers.FindUser;
 import com.facebook.model.User;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
 import java.util.Scanner;
 
 public class ShowProfileDetailsService {
@@ -33,7 +29,7 @@ public class ShowProfileDetailsService {
         System.out.println("---------------------------------------------------" +
                 "\n" + "facebook - My Profile" + "\n" +
                 "---------------------------------------------------");
-        FindUser.findUser(id);
+        FindUser.findPrintUser(id);
       /**  boolean idCheck = false;
         Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
         List<String> lines = Files.readAllLines(profileDetailsTable);

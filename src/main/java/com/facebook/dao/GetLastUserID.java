@@ -9,6 +9,6 @@ public class GetLastUserID {
     public static Integer getLastUserID() throws IOException {
         Path lastUserIDTable = Paths.get("src\\main\\resources", "LastUserIDTable.txt");
         String lastUserIDText = Files.readString(lastUserIDTable);
-        return Integer.valueOf(lastUserIDText)-1;
+        return Integer.valueOf(lastUserIDText);
     }
 }

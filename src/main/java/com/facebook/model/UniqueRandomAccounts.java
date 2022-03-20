@@ -24,7 +24,7 @@ public class UniqueRandomAccounts {
 
                     "-----------------------------------------");
 
-            FindUser.findUser(list.get(i));
+            FindUser.findPrintUser(list.get(i));
         }
         return list;
 

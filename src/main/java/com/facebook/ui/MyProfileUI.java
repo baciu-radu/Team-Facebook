@@ -65,7 +65,6 @@ public class MyProfileUI extends UI {
                     break;
                 case "5":
                     System.out.println("Find Friends");
-//                    UniqueRandomNumbers.randomGenerator(GetLastUserID.getLastUserID());
                     FindFriendsService.findFriends();
                     break;
                 default:

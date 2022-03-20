@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class FindUser {
-    public static void findUser(int id) throws IOException {
+    public static void findPrintUser(int id) throws IOException {
 
         Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
         List<String> lines = Files.readAllLines(profileDetailsTable);
@@ -18,7 +18,7 @@ public class FindUser {
                 userDetails = line.split(";");
 
                 if (userDetails[0].equals(Integer.toString(id))) {
-                    found=true;
+                    found = true;
 //                    System.out.println("---------------------------------------------------" +
 //                            "\n" + "facebook - My Profile" + "\n" +
 //                            "---------------------------------------------------");
@@ -27,5 +27,24 @@ public class FindUser {
                 }
             }
         }
+    }
+
+    public static boolean findUser(String id) throws IOException {
+        Path profileDetailsTable = Paths.get("src\\main\\resources", "FriendList.txt");
+        List<String> lines = Files.readAllLines(profileDetailsTable);
+        String[] userDetails;
+        boolean found = false;
+
+        for (String line : lines) {
+            userDetails = line.split(";");
+
+            if (userDetails[0].equals(id)) {
+                found = true;
+
+            }
+        }
+
+        return found;
+
     }
 }

@@ -18,8 +18,8 @@ public class StoreEditedAccountData extends StoreNewAccountData {
         String currentUserIDText = Files.readString(idTablePath);
 
         Files.write(profileDetailsTablePath, (userDetails.getId() + "; " + userDetails.getEmailAddress() + "; " + userDetails.getPassword() + "; " + userDetails.getName() + "; " + userDetails.getAge() + "; " + userDetails.getSex()+ "\n").getBytes(), StandardOpenOption.APPEND);
-        Files.write(idTablePath, (userDetails.getId()+";").getBytes(), StandardOpenOption.WRITE);
-
+//        Files.write(idTablePath, (userDetails.getId()+"\n").getBytes(), StandardOpenOption.WRITE);
+        Files.write(idTablePath, (userDetails.getId()+"").getBytes(), StandardOpenOption.WRITE);
     }
     public void writeCreateUserDataToDatabase (UserDetails userDetails) throws IOException {
         Path profileDetailsTablePath = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
