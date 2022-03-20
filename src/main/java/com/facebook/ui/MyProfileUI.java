@@ -1,18 +1,13 @@
 package com.facebook.ui;
 
-import com.facebook.controllers.UniqueRandomNumbers;
-import com.facebook.model.FindFriends;
-import com.facebook.model.User;
+
+import com.facebook.dao.GetLastUserID;
 import com.facebook.service.FindFriendsService;
 import com.facebook.service.ShowProfileDetailsService;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
 public class MyProfileUI extends UI {
@@ -23,7 +18,7 @@ public class MyProfileUI extends UI {
     }
 
 
-    public static void showMyProfileUI() throws IOException {
+    public static void showMyProfileUI()  throws IOException {
 
         Scanner in = new Scanner(System.in);
         MyProfileUI myProfileUI = new MyProfileUI();
@@ -70,8 +65,8 @@ public class MyProfileUI extends UI {
                     break;
                 case "5":
                     System.out.println("Find Friends");
-                    UniqueRandomNumbers.randomGenerator();
-//                    FindFriendsService.getFriends();
+//                    UniqueRandomNumbers.randomGenerator(GetLastUserID.getLastUserID());
+                    FindFriendsService.findFriends();
                     break;
                 default:
                     System.err.println("Invalid option");

@@ -1,14 +1,15 @@
 package com.facebook.service;
 
-import com.facebook.model.FindFriends;
+import com.facebook.dao.GetLastUserID;
+import com.facebook.model.UniqueRandomAccounts;
+
+
+import java.io.IOException;
 
 public class FindFriendsService {
-    public static void getFriends() {
-        for (int i = 0; i < 10; i++) {
-            int randomID = FindFriends.getRandomID(40, 50);
-            System.out.println("Random ID is:" + randomID);
-        }
-
+    public static void findFriends() throws IOException {
+        UniqueRandomAccounts.randomGenerator(GetLastUserID.getLastUserID());
 
     }
+
 }

@@ -29,7 +29,7 @@ public class StoreNewAccountData {
         Files.write(usersTablePath, (user.getId() + "; " + user.getEmailAddress() + "; " + user.getPassword() + "\n").getBytes(), StandardOpenOption.APPEND);
         Files.write(lastUserIDTable, String.valueOf(user.getId()).getBytes());
 
-    }
 
+    }
 
 }

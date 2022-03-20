@@ -1,5 +1,6 @@
 package com.facebook.service;
 
+import com.facebook.controllers.FindUser;
 import com.facebook.model.User;
 
 import java.io.IOException;
@@ -29,7 +30,11 @@ public class ShowProfileDetailsService {
 
 // Read profile from file
         int id = User.getId();
-        boolean idCheck = false;
+        System.out.println("---------------------------------------------------" +
+                "\n" + "facebook - My Profile" + "\n" +
+                "---------------------------------------------------");
+        FindUser.findUser(id);
+      /**  boolean idCheck = false;
         Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
         List<String> lines = Files.readAllLines(profileDetailsTable);
         String [] userDetails;
@@ -43,7 +48,7 @@ public class ShowProfileDetailsService {
 
             }
         }
-
+**/
 
 
 //        System.out.println("\n Name= " + name); // still to create regex
