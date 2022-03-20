@@ -47,7 +47,7 @@ public class CreateNewAccountUI extends UI {
         /**radu Code
          *
          */
-        EditUserDetailsService.editAccount(new UserDetails("User No."+ User.getId() + "- Name Not Assigned","User No."+ User.getId() + "- Age Not Assigned","User No."+ User.getId() + "- Sex Not Assigned"));
+        EditUserDetailsService.editAccount(new UserDetails(User.getId() + "- Name Not Assigned",User.getId() + "- Age Not Assigned", User.getId() + "- Sex Not Assigned"));
         /**radu Code
          *
          */

@@ -4,6 +4,7 @@ package com.facebook.ui;
 import com.facebook.dao.AddFriend;
 import com.facebook.dao.GetLastUserID;
 import com.facebook.service.FindFriendsService;
+import com.facebook.service.ShowFriendsService;
 import com.facebook.service.ShowProfileDetailsService;
 
 import java.io.IOException;
@@ -62,11 +63,27 @@ public class MyProfileUI extends UI {
                     System.out.println("Messenger");
                     break;
                 case "4":
-                    System.out.println("Show Friends");
+                    System.out.println("Show Friends"+
+                            "\n"+
+                            "---------------------------------------------------"+
+                            "\nYour Friend List"+
+                            "\n---------------------------------------------------"+
+                            "\n"+
+                            "\n");
+                    ShowFriendsService.showFriends();
+                    System.out.println("Show Friends"+
+                            "\n"+
+                            "---------------------------------------------------"+
+                            "\nEnd of Friend List"+
+                            "\n---------------------------------------------------"+
+                            "\n"+
+                            "\n");
+                    MyProfileUI.showMyProfileUI();
                     break;
                 case "5":
                     System.out.println("Find Friends");
                     FindFriendsService.findFriends();
+                    MyProfileUI.showMyProfileUI();
                     break;
                 default:
                     System.err.println("Invalid option");
