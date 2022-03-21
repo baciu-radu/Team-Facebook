@@ -1,8 +1,8 @@
 package com.facebook.service;
 
-import com.facebook.controllers.NameController;
-import com.facebook.controllers.Numeric;
-import com.facebook.controllers.SexType;
+import com.facebook.util.NameChecker;
+import com.facebook.util.Numeric;
+import com.facebook.model.SexType;
 import com.facebook.ui.EditProfileUI;
 import com.facebook.ui.LoadingUI;
 import com.facebook.ui.MainUI;
@@ -23,14 +23,7 @@ public class EnterProfileDetailsService {
 
     //read name from console
     public static void enterProfileName(){
-              boolean matches = false;
-        while (matches == false) {
-            System.out.println("Enter name:");
-            newName = in.nextLine();
-            if (NameController.isName(newName)==false) {
-                System.out.println("Invalid name, use only characters");
-            } else matches = true;
-        }
+
     }
 
 

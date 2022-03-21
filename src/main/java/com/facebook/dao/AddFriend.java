@@ -1,6 +1,5 @@
 package com.facebook.dao;
 
-import com.facebook.controllers.FindUser;
 import com.facebook.model.GetOldFriendList;
 import com.facebook.model.ModifyProfile;
 

@@ -1,12 +1,10 @@
 package com.facebook.ui;
 
-import com.facebook.controllers.Numeric;
-import com.facebook.controllers.SexType;
 import com.facebook.model.ModifyProfile;
 import com.facebook.model.ProfileDetails;
-import com.facebook.model.UserDetails;
 import com.facebook.service.EditUserDetailsService;
 import com.facebook.service.EnterProfileDetailsService;
+import com.facebook.util.NameChecker;
 
 
 import java.io.IOException;
@@ -47,7 +45,7 @@ public class EditProfileUI extends MyProfileUI {
                     break;
                 case "1":
                     System.out.println("Name");
-
+                    String newName = readName();
                     EnterProfileDetailsService.enterProfileName();
                     EnterProfileDetailsService.getNewName();
                     System.out.println("Old name was: " + ProfileDetails.getOldName());
@@ -82,5 +80,19 @@ public class EditProfileUI extends MyProfileUI {
 
         }
 
+    }
+
+    private static String readName() {
+        String newName = null;
+        boolean matches = false;
+        while (matches == false) {
+            System.out.println("Enter name:");
+            newName = new Scanner(System.in).nextLine();
+            if (NameChecker.isName(newName)==false) {
+                System.out.println("Invalid name, use only characters");
+            } else matches = true;
+        }
+
+        return newName;
     }
 }

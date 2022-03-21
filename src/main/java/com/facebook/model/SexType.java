@@ -1,4 +1,4 @@
-package com.facebook.controllers;
+package com.facebook.model;
 
 public enum SexType {
     MALE("male"), FEMALE("female");

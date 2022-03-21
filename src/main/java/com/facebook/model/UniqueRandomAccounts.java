@@ -1,6 +1,6 @@
 package com.facebook.model;
 
-import com.facebook.controllers.FindUser;
+import com.facebook.dao.FindUser;
 
 import java.io.IOException;
 import java.util.ArrayList;

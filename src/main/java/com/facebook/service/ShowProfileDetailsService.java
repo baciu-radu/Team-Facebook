@@ -1,6 +1,6 @@
 package com.facebook.service;
 
-import com.facebook.controllers.FindUser;
+import com.facebook.dao.FindUser;
 import com.facebook.model.User;
 
 import java.io.IOException;
