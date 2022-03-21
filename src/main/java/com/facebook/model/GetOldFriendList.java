@@ -19,7 +19,7 @@ public class GetOldFriendList {
             userDetails = line.split(";");
             if (userDetails[0].equals(id)) {
                 oldFriendList= line;
-//                System.out.println(oldFriendList);
+
 
             }
         }

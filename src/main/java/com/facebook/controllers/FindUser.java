@@ -19,9 +19,6 @@ public class FindUser {
 
                 if (userDetails[0].equals(Integer.toString(id))) {
                     found = true;
-//                    System.out.println("---------------------------------------------------" +
-//                            "\n" + "facebook - My Profile" + "\n" +
-//                            "---------------------------------------------------");
                     System.out.println("Name = " + userDetails[3] + "\nAge = " + userDetails[4] + "\nSex = " + userDetails[5]);
 
                 }

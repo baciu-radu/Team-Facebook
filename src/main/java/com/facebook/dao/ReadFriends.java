@@ -20,12 +20,9 @@ public class ReadFriends {
                 for (int i = 1; i < friend.length; i++) {
                     if (friend[0].equals(id)) {
                         System.out.println( "-----------------------------\n"+"Friend No. :"+ Integer.parseInt(friend[i]));
-//                        System.out.println(Integer.parseInt(friend[i]));
                         FindUser.findPrintUser(Integer.parseInt(friend[i]));
                     }
-//                if (friends[0].equals(id)) {
-//                    oldFriendList= line;
-//                System.out.println(oldFriendList);
+
 
                 }
             }

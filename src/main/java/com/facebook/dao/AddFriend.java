@@ -20,7 +20,6 @@ public class AddFriend {
 
         } else {
             String addFriend = GetOldFriendList.getOldFriendList() + Integer.toString(friendToAdd).concat(";");
-//            String addFriend = friendToAdd.concat(";");
             ModifyProfile.modifyFriends(GetOldFriendList.getOldFriendList(), addFriend);
 
         }

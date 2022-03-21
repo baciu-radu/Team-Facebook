@@ -17,14 +17,10 @@ public class ModifyProfile {
             //Reading all the lines of input text file into oldContent
 
             String line = reader.readLine();
-//            System.err.println(line);
-
             while (line != null)
             {
                 oldContent = oldContent + line + System.lineSeparator();
-
                 line = reader.readLine();
-//                System.err.println(line);
             }
 
             //Replacing oldString with newString in the oldContent
@@ -69,14 +65,14 @@ public class ModifyProfile {
             //Reading all the lines of input text file into oldContent
 
             String line = reader.readLine();
-//            System.err.println(line);
+
 
             while (line != null)
             {
                 oldContent = oldContent + line + System.lineSeparator();
 
                 line = reader.readLine();
-//                System.err.println(line);
+
             }
 
             //Replacing oldString with newString in the oldContent
