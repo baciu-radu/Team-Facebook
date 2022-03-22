@@ -1,6 +1,7 @@
 package com.facebook.dao;
 
 import com.facebook.model.User;
+import com.facebook.model.UserDetails;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -28,7 +29,7 @@ public class StoreNewAccountData {
         Files.write(usersTablePath, (user.getId() + "; " + user.getEmailAddress() + "; " + user.getPassword() + "\n").getBytes(), StandardOpenOption.APPEND);
         Files.write(lastUserIDTable, String.valueOf(user.getId()).getBytes());
 
-    }
 
+    }
 
 }
