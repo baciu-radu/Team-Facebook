@@ -6,7 +6,7 @@
 6; c@mail.com; cpass
 7; d@mail.com; dpass
 8; e@mail.com; 2pass
-9; f; fpass
+9; f@mail.com; fpass
 10; g@mail.com; gpass
 11; h@mail.com; hpass
 12; i@mail.com; ipass
@@ -29,7 +29,7 @@
 29; maricica@mail.com; maricicapass
 30; violeta@mail.com; viopass
 31; nana@mail.com; nanapass
-32; ; 
+32; luana@mail.com; luanapass
 33; monica@mail.com; monipass
 34; mirel@mail.com; mirelpass
 35; sandel@mail.com; sandelpass
@@ -134,3 +134,4 @@
 134; bobi@mail.com; bobipass
 135; stela@mail.com; stelapass
 136; luna@mail.com; Lunapass
+137; fortuna@mail.com; fortunapass
