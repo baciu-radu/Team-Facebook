@@ -1,7 +1,12 @@
 package com.facebook.ui;
 
+import com.facebook.model.User;
+
 import java.awt.*;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class LoginUI extends UI {
@@ -24,6 +29,26 @@ public class LoginUI extends UI {
         System.in.read();
 
         loadingUI.popProgressBar();
+        /*
+        Radu Code
+         */
+//        System.out.println("Successfully logged in. Taking you to your account");
+//        Path idTablePath = Paths.get("src\\main\\resources", "CurrentUserIDTable.txt.txt");
+//        String currentUserIDText = Files.readString(idTablePath);
+//
+//        Files.write(currentUserIDTable, String.valueOf(user.getId()).getBytes());
+//        Path idTable =User.getNewID();
+//        System.out.println(User.getNewID());
+//
+        if (User.getId()==0){
+            System.err.println("Incorrect email or password");
+            MainUI mainUI= new MainUI();
+            mainUI.showMainUI();
+
+        }else MyProfileUI.showMyProfileUI();
+        /*
+        Radu Code
+         */
     }
 
 
