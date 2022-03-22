@@ -31,7 +31,7 @@ public class MyProfileUI extends UI {
         System.out.println("---------------------------------------------------" +
                 "\n" + "Option - Menu" +
                 "\n" +
-                "\n" + "\t\t\t\t" + "0 - Exit" +
+                "\n" + "\t\t\t\t" + "x - Exit" +
                 "\n" + "\t\t\t\t" + "1 - News Feed" +
                 "\n" + "\t\t\t\t" + "2 - Edit Profile" +
                 "\n" + "\t\t\t\t" + "3 - Messenger" +
@@ -43,13 +43,13 @@ public class MyProfileUI extends UI {
         );
         String option = "Start";
 
-        while (option != "0") {
+        while (option != "x") {
 
             option = in.next();
 
             switch (option) {
 
-                case "0":
+                case "x":
                     System.exit(0);
                     break;
                 case "1":

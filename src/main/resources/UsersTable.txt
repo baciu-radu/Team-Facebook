@@ -135,3 +135,6 @@
 135; stela@mail.com; stelapass
 136; luna@mail.com; Lunapass
 137; fortuna@mail.com; fortunapass
+138; sanda@mail.com; sandapass
+139; rimona@mail.com; rimonapass
+140; rebeca@mail.com; rwebepass

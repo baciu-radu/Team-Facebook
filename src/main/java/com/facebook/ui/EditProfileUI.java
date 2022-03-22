@@ -26,7 +26,7 @@ public class EditProfileUI extends MyProfileUI {
         System.out.println("---------------------------------------------------" +
                 "\n" + "facebook - Edit Profile" +
                 "\n" +
-                "\n" + "\t\t\t\t" + "0 - Exit" +
+                "\n" + "\t\t\t\t" + "x - Exit" +
                 "\n" + "\t\t\t\t" + "1 - Name" +
                 "\n" + "\t\t\t\t" + "2 - Age" +
                 "\n" + "\t\t\t\t" + "3 - Sex" +
@@ -42,7 +42,7 @@ public class EditProfileUI extends MyProfileUI {
 
             switch (option) {
 
-                case "0":
+                case "x":
                     System.exit(0);
                     break;
                 case "1":
