@@ -138,3 +138,14 @@
 138; sanda@mail.com; sandapass
 139; rimona@mail.com; rimonapass
 140; rebeca@mail.com; rwebepass
+141; sastrasalina@gmail.com; Parola123.
+142; batman@gmail.com; batman
+143; batman2@gmail.com; numamaijoc
+144; batman3@gmail.com; MeNoLike
+145; batman4@gmail.com; batmanPAna la sfarsit
+146; batman5@gmail.com; IncaNuL-amVazutPeAstaNou
+147; batman6@gmail.com; OdataSiOdata
+148; moraci@gmail.com; Mancare
+149; cartoficuceapa@gmail.com; mi-efoame
+150; smartmenu@gmail.com; sosgleen
+151; mamsaturat@gmail.com; foame
