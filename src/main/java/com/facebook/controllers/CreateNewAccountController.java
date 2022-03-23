@@ -14,7 +14,7 @@ public class CreateNewAccountController {
     }
 
     public boolean validatePassword (String password) {
-        Pattern passwordPattern = Pattern.compile("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*_+-]).{8,20}$");
+        Pattern passwordPattern = Pattern.compile("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#.?!@$%^&*_+-]).{8,20}$");
         Matcher passwordMatcher = passwordPattern.matcher(password);
 
         return passwordMatcher.matches();
