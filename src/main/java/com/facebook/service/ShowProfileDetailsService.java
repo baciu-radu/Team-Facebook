@@ -1,6 +1,7 @@
 package com.facebook.service;
 
 import com.facebook.controllers.FindUser;
+import com.facebook.dao.GetCurrentUserID;
 import com.facebook.model.User;
 
 import java.io.IOException;
@@ -9,7 +10,8 @@ import java.util.Scanner;
 public class ShowProfileDetailsService {
     public static void showProfileDetails() throws IOException {
         Scanner in = new Scanner(System.in);
-
+        GetCurrentUserID getCurrentUserID = new GetCurrentUserID();
+        FindUser findUser = new FindUser();
 
         String name = "not assigned";
         int age = 0;
@@ -25,12 +27,12 @@ public class ShowProfileDetailsService {
         //add date of join
 
 // Read profile from file
-        int id = User.getId();
+        String id = getCurrentUserID.getCurrentUserID();
         System.out.println("---------------------------------------------------" +
                 "\n" + "facebook - My Profile" + "\n" +
                 "---------------------------------------------------");
-        FindUser.findPrintUser(id);
-      /**  boolean idCheck = false;
+        findUser.findPrintUser(id);
+      /*  boolean idCheck = false;
         Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
         List<String> lines = Files.readAllLines(profileDetailsTable);
         String [] userDetails;
@@ -44,7 +46,7 @@ public class ShowProfileDetailsService {
 
             }
         }
-**/
+*/
 
 
 //        System.out.println("\n Name= " + name); // still to create regex

@@ -138,3 +138,4 @@
 138; sanda@mail.com; sandapass;Sanda Ral;39;female
 139; rimona@mail.com; rimonapass; 139- Name Not Assigned; 139- Age Not Assigned; 139- Sex Not Assigned
 140; rebeca@mail.com; rwebepass;Rebeca Pasc;34;female
+141;adi@gmail.com;Parola123+;Adi Libenciuc;29;male

@@ -9,10 +9,11 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class FindFriendsService {
-    public static void findFriends() throws IOException {
+    public void findFriends() throws IOException {
+        AddFriendService addFriendService = new AddFriendService();
         UniqueRandomAccounts.randomGenerator(GetLastUserID.getLastUserID());
         System.out.println("\n Type the User No. of the person you want to Add as Friend");
-        AddFriendService.addFriend();
+        addFriendService.addFriend();
 
     }
 

@@ -11,7 +11,8 @@ import java.util.List;
 public class GetOldFriendList {
     private static String oldFriendList;
     public static String getOldFriendList() throws IOException {
-        String id = GetCurrentUserID.getCurrentUserID();
+        GetCurrentUserID getCurrentUserID = new GetCurrentUserID();
+        String id = getCurrentUserID.getCurrentUserID();
         Path profileDetailsTable = Paths.get("src\\main\\resources", "FriendList.txt");
         List<String> lines = Files.readAllLines(profileDetailsTable);
         String[] userDetails;

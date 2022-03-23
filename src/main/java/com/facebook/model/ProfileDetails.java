@@ -18,7 +18,8 @@ public class ProfileDetails {
 //    private int friendsNo;
 
     public static String getOldName() throws IOException {
-        int id = User.getId();
+        User user = new User();
+        int id = user.getId();
         Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
         List<String> lines = Files.readAllLines(profileDetailsTable);
         String[] userDetails;
@@ -35,7 +36,8 @@ public class ProfileDetails {
     }
 
     public static String getOldAge() throws IOException {
-        int id = User.getId();
+        User user = new User();
+        int id = user.getId();
         Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
         List<String> lines = Files.readAllLines(profileDetailsTable);
         String[] userDetails;
@@ -49,7 +51,8 @@ public class ProfileDetails {
     return oldAge;
     }
     public static String getOldSex() throws IOException {
-        int id = User.getId();
+        User user = new User();
+        int id = user.getId();
         Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
         List<String> lines = Files.readAllLines(profileDetailsTable);
         String[] userDetails;

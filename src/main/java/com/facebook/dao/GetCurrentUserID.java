@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class GetCurrentUserID {
-    public static String getCurrentUserID() throws IOException {
+    public String getCurrentUserID() throws IOException {
         Path currentUserIDTable = Paths.get("src\\main\\resources", "CurrentUserIDTable.txt");
         String currentUserIDText = Files.readString(currentUserIDTable);
 
