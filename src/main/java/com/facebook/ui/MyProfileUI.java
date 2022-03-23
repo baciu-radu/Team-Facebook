@@ -1,6 +1,5 @@
 package com.facebook.ui;
 
-
 import com.facebook.service.FindFriendsService;
 import com.facebook.service.ShowFriendsService;
 import com.facebook.service.ShowProfileDetailsService;
@@ -58,9 +57,7 @@ public class MyProfileUI extends UI {
                     EditProfileUI.showEditProfileUI();
                     break;
                 case "3":
-
                     System.out.println("Messenger");
-                    MessageUI.messages();
                     break;
                 case "4":
                     System.out.println("Show Friends"+
