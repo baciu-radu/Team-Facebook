@@ -1,13 +1,15 @@
 package com.facebook.model;
 
-import com.facebook.ui.CreateNewAccountUI;
-
 public class User {
 
     private static int newID = 1;
-    private static int id;
+    private int id;
     private static String emailAddress;
     private static String password;
+
+    public User () {
+
+    }
 
     public User (String emailAddress, String password) {
         this.id = newID++;
@@ -19,7 +21,7 @@ public class User {
         return newID;
     }
 
-    public static int getId() {
+    public int getId() {
         return id;
     }
 

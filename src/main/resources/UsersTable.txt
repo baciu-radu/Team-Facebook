@@ -137,4 +137,5 @@
 137; fortuna@mail.com; fortunapass
 138; sanda@mail.com; sandapass
 139; rimona@mail.com; rimonapass
-140; rebeca@mail.com; rwebepass
+140; rebeca@mail.com; rwebepass141
+141;adi@gmail.com;Parola123+

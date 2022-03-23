@@ -19,10 +19,11 @@ public class UserDetails {
 //        String relationshipStatus = "not assigned";
     private int friendsNo;
     private int newfriendsNo;
+    private User user;
 
 
     public UserDetails(String name, String age, String sex) {
-        this.id = User.getId();
+        this.id = user.getId();
         this.emailAddress = User.getEmailAddress();
         this.password = User.getPassword();
         this.name = name;

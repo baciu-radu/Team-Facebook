@@ -6,10 +6,12 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class AddFriendService {
-    public static void addFriend() throws IOException {
+    public void addFriend() throws IOException {
+
+        AddFriend addFriend = new AddFriend();
         Scanner in = new Scanner(System.in);
         int friendToAdd = in.nextInt();
-        AddFriend.writeFriendToList(friendToAdd);
+        addFriend.writeFriendToList(friendToAdd);
         System.out.println("Friend Successfully Added To Your FriendList");
     }
 }

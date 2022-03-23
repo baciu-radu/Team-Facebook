@@ -11,11 +11,13 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
 public class AddFriend {
-    public static void writeFriendToList(int friendToAdd) throws IOException {
+    public void writeFriendToList(int friendToAdd) throws IOException {
         Path friendListTablePath = Paths.get("src\\main\\resources", "FriendList.txt");
+        FindUser findUser = new FindUser();
+        GetCurrentUserID getCurrentUserID = new GetCurrentUserID();
 
-        if (FindUser.findUser(GetCurrentUserID.getCurrentUserID()) == false) {
-            String currentUserID = GetCurrentUserID.getCurrentUserID();
+        if (findUser.findUser(getCurrentUserID.getCurrentUserID()) == false) {
+            String currentUserID = getCurrentUserID.getCurrentUserID();
             Files.write(friendListTablePath, (currentUserID + ";" + friendToAdd + ";"+"\n").getBytes(), StandardOpenOption.APPEND);
 
         } else {

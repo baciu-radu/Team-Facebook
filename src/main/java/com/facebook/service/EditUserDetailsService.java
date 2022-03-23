@@ -7,7 +7,7 @@ import com.facebook.model.UserDetails;
 import java.io.IOException;
 
 public class EditUserDetailsService {
-    public static void editAccount(UserDetails userDetails) throws IOException {
+    public void editAccount(UserDetails userDetails) throws IOException {
 
         StoreEditedAccountData storeEditedAccountData = new StoreEditedAccountData();
         storeEditedAccountData.writeCurrentUserDataToDatabase(userDetails);

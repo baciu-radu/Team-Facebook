@@ -12,6 +12,8 @@ public class UniqueRandomAccounts {
 
     public static List<Integer> randomGenerator(int max) throws IOException {
 
+        FindUser findUser = new FindUser();
+
         ArrayList<Integer> list = new ArrayList<Integer>();
         for (int i = 40; i < max; i++) {
             list.add(i);
@@ -24,7 +26,7 @@ public class UniqueRandomAccounts {
 
                     "-----------------------------------------");
 
-            FindUser.findPrintUser(list.get(i));
+            findUser.findPrintUser(String.valueOf(list.get(i)));
         }
         return list;
 

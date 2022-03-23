@@ -19,6 +19,7 @@ public class LoginUI extends UI {
         AccountChecker accountChecker = new AccountChecker();
         PasswordChecker passwordChecker = new PasswordChecker();
         MainUI mainUI = new MainUI();
+        HomeUI homeUI = new HomeUI();
         Scanner in = new Scanner(System.in);
         String user = "";
         String password = "";
@@ -91,6 +92,8 @@ public class LoginUI extends UI {
         System.in.read();
 
         loadingUI.popProgressBar();
+        homeUI.showHomeUI();
+
     }
 
 
