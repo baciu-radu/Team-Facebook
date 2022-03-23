@@ -1,7 +1,12 @@
 package com.facebook.model;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class Comment implements GenericEntity {
-    public static final String COMM_REPOSITORY_PATH = "comments.txt";
+
+    static Path path = Paths.get("src\\main\\resources", "comments.txt");
+    public static final String COMM_REPOSITORY_PATH = String.valueOf(path);
     private int id;
     private int postId;
     private String comment;

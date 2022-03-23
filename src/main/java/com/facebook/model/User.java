@@ -1,8 +1,12 @@
 package com.facebook.model;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class User implements GenericEntity {
 
-    private static final String USER_REPOSITORY = "users.txt";
+    static Path path = Paths.get("src\\main\\resources", "UsersTable.txt");
+    private static final String USER_REPOSITORY_PATH = String.valueOf(path);
     private int user_id;
     private String email;
     private String password;
@@ -28,7 +32,7 @@ public class User implements GenericEntity {
 
     @Override
     public String getStoragePath() {
-        return USER_REPOSITORY;
+        return USER_REPOSITORY_PATH;
     }
 
     public String getEmail() {

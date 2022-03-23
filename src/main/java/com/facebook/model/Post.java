@@ -1,8 +1,12 @@
 package com.facebook.model;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class Post implements GenericEntity {
 
-    public static final String POST_REPOSITORY_PATH = "posts.txt";
+    static Path path = Paths.get("src\\main\\resources", "posts.txt");
+    public static final String POST_REPOSITORY_PATH = String.valueOf(path);
     private int id;
     private int userId;
     private String description;
