@@ -1,0 +1,68 @@
+package com.facebook.model;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
+public class ProfileDetails {
+    private String emailAddress;
+    private String password;
+    private String name;
+    private String age;
+    private String sex;
+    private static String oldName;
+    private static String oldAge;
+    private static String oldSex;
+//    private int friendsNo;
+
+    public static String getOldName() throws IOException {
+        User user = new User();
+        int id = user.getId();
+        Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
+        List<String> lines = Files.readAllLines(profileDetailsTable);
+        String[] userDetails;
+        for (String line : lines) {
+            userDetails = line.split(";");
+            if (userDetails[0].equals(Integer.toString(id))) {
+              oldName= userDetails[3];
+
+            }
+        }
+
+
+    return oldName;
+    }
+
+    public static String getOldAge() throws IOException {
+        User user = new User();
+        int id = user.getId();
+        Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
+        List<String> lines = Files.readAllLines(profileDetailsTable);
+        String[] userDetails;
+        for (String line : lines) {
+            userDetails = line.split(";");
+            if (userDetails[0].equals(Integer.toString(id))) {
+                oldAge= userDetails[4];
+
+            }
+        }
+    return oldAge;
+    }
+    public static String getOldSex() throws IOException {
+        User user = new User();
+        int id = user.getId();
+        Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
+        List<String> lines = Files.readAllLines(profileDetailsTable);
+        String[] userDetails;
+        for (String line : lines) {
+            userDetails = line.split(";");
+            if (userDetails[0].equals(Integer.toString(id))) {
+                oldSex= userDetails[5];
+
+            }
+        }
+        return oldSex;
+    }
+}
