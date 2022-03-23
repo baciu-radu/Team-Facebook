@@ -138,5 +138,3 @@
 138; sanda@mail.com; sandapass
 139; rimona@mail.com; rimonapass
 140; rebeca@mail.com; rwebepass
-141; storia@mail.com; storiapass
-142; gemma@mail.com; gemmapass

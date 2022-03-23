@@ -8,8 +8,8 @@ public abstract class UI {
         final String password;
         final JPasswordField jpf = new JPasswordField();
         password = JOptionPane.showConfirmDialog(null, jpf, promptMessage,
-                JOptionPane.OK_CANCEL_OPTION,
-                JOptionPane.QUESTION_MESSAGE) == JOptionPane.OK_OPTION ?
+                JOptionPane.DEFAULT_OPTION,
+                JOptionPane.PLAIN_MESSAGE) == JOptionPane.OK_OPTION ?
                 new String(jpf.getPassword()) : "";
         return password;
     }

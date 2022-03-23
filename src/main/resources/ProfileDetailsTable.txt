@@ -138,5 +138,3 @@
 138; sanda@mail.com; sandapass;Sanda Ral;39;female
 139; rimona@mail.com; rimonapass; 139- Name Not Assigned; 139- Age Not Assigned; 139- Sex Not Assigned
 140; rebeca@mail.com; rwebepass;Rebeca Pasc;34;female
-141; storia@mail.com; storiapass;Storia Antonia;34;female
-142; gemma@mail.com; gemmapass; 142- Name Not Assigned; 142- Age Not Assigned; 142- Sex Not Assigned
