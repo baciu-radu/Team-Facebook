@@ -24,8 +24,8 @@ public class UserDetails {
 
     public UserDetails(String name, String age, String sex) {
         this.id = user.getId();
-        this.emailAddress = User.getEmailAddress();
-        this.password = User.getPassword();
+        this.emailAddress = user.getEmailAddress();
+        this.password = user.getPassword();
         this.name = name;
         this.age = age;
         this.sex = sex;

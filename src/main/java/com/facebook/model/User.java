@@ -4,8 +4,8 @@ public class User {
 
     private static int newID = 1;
     private int id;
-    private static String emailAddress;
-    private static String password;
+    private String emailAddress;
+    private String password;
 
     public User () {
 
@@ -25,15 +25,15 @@ public class User {
         return id;
     }
 
-    public static String getEmailAddress() {
+    public String getEmailAddress() {
         return emailAddress;
     }
 
-    public static String getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public static void setNewID(int newID) {
+    public void setNewID(int newID) {
         User.newID = newID;
     }
 
