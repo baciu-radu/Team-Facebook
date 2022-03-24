@@ -1,5 +1,7 @@
 package com.facebook.model;
 
+import com.facebook.dao.GetCurrentUserID;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -7,6 +9,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class ProfileDetails {
+    GetCurrentUserID getCurrentUserID = new GetCurrentUserID();
     private String emailAddress;
     private String password;
     private String name;
@@ -17,15 +20,16 @@ public class ProfileDetails {
     private static String oldSex;
 //    private int friendsNo;
 
-    public static String getOldName() throws IOException {
-        User user = new User();
-        int id = user.getId();
+    public String getOldName() throws IOException {
+
+        String id = getCurrentUserID.getCurrentUserID();
         Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
         List<String> lines = Files.readAllLines(profileDetailsTable);
         String[] userDetails;
         for (String line : lines) {
             userDetails = line.split(";");
-            if (userDetails[0].equals(Integer.toString(id))) {
+//            if (userDetails[0].equals(Integer.toString(id))) {
+            if (userDetails[0].equals(id)) {
               oldName= userDetails[3];
 
             }
@@ -35,30 +39,28 @@ public class ProfileDetails {
     return oldName;
     }
 
-    public static String getOldAge() throws IOException {
-        User user = new User();
-        int id = user.getId();
+    public  String getOldAge() throws IOException {
+        String id = getCurrentUserID.getCurrentUserID();
         Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
         List<String> lines = Files.readAllLines(profileDetailsTable);
         String[] userDetails;
         for (String line : lines) {
             userDetails = line.split(";");
-            if (userDetails[0].equals(Integer.toString(id))) {
+            if (userDetails[0].equals(id)) {
                 oldAge= userDetails[4];
 
             }
         }
     return oldAge;
     }
-    public static String getOldSex() throws IOException {
-        User user = new User();
-        int id = user.getId();
+    public  String getOldSex() throws IOException {
+        String id = getCurrentUserID.getCurrentUserID();
         Path profileDetailsTable = Paths.get("src\\main\\resources", "ProfileDetailsTable.txt");
         List<String> lines = Files.readAllLines(profileDetailsTable);
         String[] userDetails;
         for (String line : lines) {
             userDetails = line.split(";");
-            if (userDetails[0].equals(Integer.toString(id))) {
+            if (userDetails[0].equals(id)) {
                 oldSex= userDetails[5];
 
             }

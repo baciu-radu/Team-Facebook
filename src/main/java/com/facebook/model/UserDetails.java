@@ -1,9 +1,13 @@
 package com.facebook.model;
 
+import com.facebook.dao.GetCurrentUserID;
+
+import java.io.IOException;
+
 public class UserDetails {
 
 
-    private int id;
+    private String id;
     private String emailAddress;
     private String password;
     private static String name;
@@ -19,11 +23,13 @@ public class UserDetails {
 //        String relationshipStatus = "not assigned";
     private int friendsNo;
     private int newfriendsNo;
-    private User user;
+    User user = new User();
+//    private User user;
+    GetCurrentUserID getCurrentUserID = new GetCurrentUserID();
 
 
-    public UserDetails(String name, String age, String sex) {
-        this.id = user.getId();
+    public UserDetails(String name, String age, String sex) throws IOException {
+        this.id = getCurrentUserID.getCurrentUserID();
         this.emailAddress = user.getEmailAddress();
         this.password = user.getPassword();
         this.name = name;
@@ -31,6 +37,8 @@ public class UserDetails {
         this.sex = sex;
         this.friendsNo = friendsNo;
     }
+
+
 
 
     public void NewUserDetails(String name, String age, String sex) {
@@ -41,7 +49,7 @@ public class UserDetails {
     }
 
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -54,7 +62,7 @@ public class UserDetails {
     }
 
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

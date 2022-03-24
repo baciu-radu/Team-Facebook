@@ -68,7 +68,7 @@ public class HomeUI extends UI {
                     break;
                 case "4":
                     System.out.println("Messenger");
-                    MessageUI.messages();
+//                    MessageUI.messages();
                     break;
                 case "5":
                     System.out.println("Show Friends" +
@@ -79,17 +79,22 @@ public class HomeUI extends UI {
                             "\n" +
                             "\n");
                     showFriendsService.showFriends();
-                    System.out.println("Show Friends" +
-                            "\n" +
-                            "---------------------------------------------------" +
+                    System.out.println(
+                            "-----------------------------" +
                             "\nEnd of Friend List" +
-                            "\n---------------------------------------------------" +
-                            "\n" +
                             "\n");
+                    System.out.println("---------------------------------------------------" + "\n" + "Press Enter to return to Home Page");
+                    System.in.read();
+                    loadingUI.popProgressBar();
+                    showHomeUI();
                     break;
                 case "6":
                     System.out.println("Find Friends");
                     findFriendsService.findFriends();
+                    System.out.println("---------------------------------------------------" + "\n" + "Press Enter to return to Home Page");
+                    System.in.read();
+                    loadingUI.popProgressBar();
+                    showHomeUI();
                     break;
                 case "x":
                     ui.closeApplication();

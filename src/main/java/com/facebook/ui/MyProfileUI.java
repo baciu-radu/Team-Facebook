@@ -9,8 +9,9 @@ public class MyProfileUI extends UI {
 
     public void showMyProfileUI() throws IOException, InterruptedException, AWTException {
         LoadingUI loadingUI = new LoadingUI();
+        ShowProfileDetailsService showProfileDetailsService = new ShowProfileDetailsService();
         loadingUI.popProgressBar();
-        ShowProfileDetailsService.showProfileDetails();
+        showProfileDetailsService.showProfileDetails();
 
 
     }

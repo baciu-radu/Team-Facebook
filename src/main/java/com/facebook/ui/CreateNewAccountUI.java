@@ -3,8 +3,8 @@ package com.facebook.ui;
 
 import com.facebook.controllers.CreateNewAccountController;
 import com.facebook.dao.AccountChecker;
+import com.facebook.dao.GetCurrentUserID;
 import com.facebook.model.User;
-import com.facebook.model.UserDetails;
 import com.facebook.service.EditUserDetailsService;
 import com.facebook.service.UserService;
 
@@ -24,6 +24,7 @@ public class CreateNewAccountUI extends UI {
         CreateNewAccountController createNewAccountController = new CreateNewAccountController();
         AccountChecker accountChecker = new AccountChecker();
         EditUserDetailsService editUserDetailsService = new EditUserDetailsService();
+        GetCurrentUserID getCurrentUserID = new GetCurrentUserID();
         Scanner in = new Scanner(System.in);
         User user = new User();
         String emailAddress = "";
@@ -60,7 +61,6 @@ public class CreateNewAccountUI extends UI {
             newPassword = ui.getMaskedPassword("Enter password");
             isPasswordValid = createNewAccountController.validatePassword(newPassword);
         }
-
         System.out.println("Press Enter to Sign Up");
         System.in.read();
 
@@ -69,7 +69,6 @@ public class CreateNewAccountUI extends UI {
 
         System.out.println("Account successfully created!");
         TimeUnit.MILLISECONDS.sleep(2000);
-        editUserDetailsService.editAccount(new UserDetails(user.getId() + "- Name Not Assigned",user.getId() + "- Age Not Assigned", user.getId() + "- Sex Not Assigned"));
 
         loadingUI.popProgressBar();
         mainUI.showMainUI();

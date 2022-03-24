@@ -4,14 +4,20 @@ import com.facebook.model.ModifyProfile;
 import com.facebook.model.ProfileDetails;
 import com.facebook.service.EnterProfileDetailsService;
 
+import java.awt.*;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
 public class EditProfileUI extends UI {
-    public void showEditProfileUI() throws IOException {
+    public void showEditProfileUI() throws IOException, InterruptedException, AWTException {
         UI ui = new EditProfileUI();
+        LoadingUI loadingUI = new LoadingUI();
+        HomeUI homeUI = new HomeUI();
+        ProfileDetails profileDetails = new ProfileDetails();
+        EnterProfileDetailsService enterProfileDetailsService = new EnterProfileDetailsService();
+
         Scanner in = new Scanner(System.in);
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy");
         String yearDate = dateFormat.format(new Date());
@@ -37,29 +43,41 @@ public class EditProfileUI extends UI {
                 case "1":
                     System.out.println("Name");
 
-                    EnterProfileDetailsService.enterProfileName();
-                    EnterProfileDetailsService.getNewName();
-                    System.out.println("Old name was: " + ProfileDetails.getOldName());
-                    ModifyProfile.modifyProfile(ProfileDetails.getOldName(),EnterProfileDetailsService.getNewName());
-                    System.out.println("New name is: " + EnterProfileDetailsService.getNewName());
+                    enterProfileDetailsService.enterProfileName();
+                    enterProfileDetailsService.getNewName();
+                    System.out.println("Old name was: " + profileDetails.getOldName());
+                    ModifyProfile.modifyProfile(profileDetails.getOldName(),enterProfileDetailsService.getNewName());
+                    System.out.println("New name is: " + enterProfileDetailsService.getNewName());
+                    System.out.println("---------------------------------------------------" + "\n" + "Press Enter to return to Home Page");
+                    System.in.read();
+                    loadingUI.popProgressBar();
+                    homeUI.showHomeUI();
                     break;
                 case "2":
                     System.out.println("Age");
 
-                    EnterProfileDetailsService.enterProfileAge();
-                    EnterProfileDetailsService.getNewAge();
-                    System.out.println("Old age was: " + ProfileDetails.getOldAge());
-                    ModifyProfile.modifyProfile(ProfileDetails.getOldAge(),EnterProfileDetailsService.getNewAge());
-                    System.out.println("New age is: " + EnterProfileDetailsService.getNewAge());
+                    enterProfileDetailsService.enterProfileAge();
+                    enterProfileDetailsService.getNewAge();
+                    System.out.println("Old age was: " + profileDetails.getOldAge());
+                    ModifyProfile.modifyProfile(profileDetails.getOldAge(),enterProfileDetailsService.getNewAge());
+                    System.out.println("New age is: " + enterProfileDetailsService.getNewAge());
+                    System.out.println("---------------------------------------------------" + "\n" + "Press Enter to return to Home Page");
+                    System.in.read();
+                    loadingUI.popProgressBar();
+                    homeUI.showHomeUI();
                     break;
                 case "3":
                     System.out.println("Sex");
 
-                    EnterProfileDetailsService.enterProfileSex();
-                    EnterProfileDetailsService.getNewSex();
-                    System.out.println("Old sex was: " + ProfileDetails.getOldSex());
-                    ModifyProfile.modifyProfile(ProfileDetails.getOldSex(),EnterProfileDetailsService.getNewSex());
-                    System.out.println("New sex is: " + EnterProfileDetailsService.getNewSex());
+                    enterProfileDetailsService.enterProfileSex();
+                    enterProfileDetailsService.getNewSex();
+                    System.out.println("Old sex was: " + profileDetails.getOldSex());
+                    ModifyProfile.modifyProfile(profileDetails.getOldSex(),enterProfileDetailsService.getNewSex());
+                    System.out.println("New sex is: " + enterProfileDetailsService.getNewSex());
+                    System.out.println("---------------------------------------------------" + "\n" + "Press Enter to return to Home Page");
+                    System.in.read();
+                    loadingUI.popProgressBar();
+                    homeUI.showHomeUI();
                     break;
                 case "x":
                     ui.closeApplication();

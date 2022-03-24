@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class ShowProfileDetailsService {
-    public static void showProfileDetails() throws IOException {
+    public void showProfileDetails() throws IOException {
         Scanner in = new Scanner(System.in);
         GetCurrentUserID getCurrentUserID = new GetCurrentUserID();
         FindUser findUser = new FindUser();

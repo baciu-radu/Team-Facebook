@@ -1,8 +1,9 @@
 package com.facebook.ui;
 
 import com.facebook.controllers.LoginController;
-import com.facebook.dao.AccountChecker;
-import com.facebook.dao.PasswordChecker;
+import com.facebook.dao.*;
+import com.facebook.model.UserDetails;
+import com.facebook.service.EditUserDetailsService;
 
 import java.awt.*;
 import java.io.IOException;
@@ -18,8 +19,12 @@ public class LoginUI extends UI {
         LoginController loginController = new LoginController();
         AccountChecker accountChecker = new AccountChecker();
         PasswordChecker passwordChecker = new PasswordChecker();
+        EditUserDetailsService editUserDetailsService = new EditUserDetailsService();
+        GetCurrentUserID getCurrentUserID = new GetCurrentUserID();
+        GetLastUserID getLastUserID = new GetLastUserID();
         MainUI mainUI = new MainUI();
         HomeUI homeUI = new HomeUI();
+        ProfileChecker profileChecker = new ProfileChecker();
         Scanner in = new Scanner(System.in);
         String user = "";
         String password = "";
@@ -87,7 +92,9 @@ public class LoginUI extends UI {
                 ui.closeApplication();
             }
         }
-
+        if(getCurrentUserID.getCurrentUserID().equals(Integer.toString(getLastUserID.getLastUserID())) && profileChecker.checkProfileExists(getCurrentUserID.getCurrentUserID())==false ){
+                    editUserDetailsService.editAccount(new UserDetails(getCurrentUserID.getCurrentUserID() + "- Name Not Assigned",getCurrentUserID.getCurrentUserID() + "- Age Not Assigned", getCurrentUserID.getCurrentUserID() + "- Sex Not Assigned"));
+        }
         System.out.println("Press Enter to Log In");
         System.in.read();
 
