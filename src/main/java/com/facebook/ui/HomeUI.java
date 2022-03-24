@@ -68,7 +68,7 @@ public class HomeUI extends UI {
                     break;
                 case "4":
                     System.out.println("Messenger");
-//                    MessageUI.messages();
+                    MessageUI.messages();
                     break;
                 case "5":
                     System.out.println("Show Friends" +
