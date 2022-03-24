@@ -18,7 +18,7 @@ public class HomePage {
     public void newsFeed() throws IOException, InterruptedException, AWTException {
         HomeUI homeUI = new HomeUI();
         LoadingUI loadingUI = new LoadingUI();
-        int n = 5;
+        int n = 7;
         PostDao postsDao = new PostDao();
         java.util.List<GenericEntity> newsFeed = postsDao.get(n, Post.POST_REPOSITORY_PATH);
 

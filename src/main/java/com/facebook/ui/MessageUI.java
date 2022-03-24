@@ -140,12 +140,14 @@ public class MessageUI {
             switch (selection) {
                 case 0:
                      System.exit(0);
+                     break;
                 case 1:
                     int reciever = chooseUser();
                     inChatPoint(reciever, selectFile( reciever));
-
+                    break;
                 case -1:
                 mainPoint();
+                break;
             default: {
                     System.err.println("Based on my personal intuition your iq is over 112, please try again");
                     toChooseOrNotToChoose();
