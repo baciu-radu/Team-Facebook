@@ -1,5 +1,6 @@
 package com.facebook.ui;
 
+import com.facebook.model.HomePage;
 import com.facebook.service.FindFriendsService;
 import com.facebook.service.ShowFriendsService;
 
@@ -14,6 +15,7 @@ public class HomeUI extends UI {
     public void showHomeUI() throws IOException, InterruptedException, AWTException {
 
         UI ui = new HomeUI();
+        HomePage homePage = new HomePage();
         MyProfileUI myProfileUI = new MyProfileUI();
         FindFriendsService findFriendsService = new FindFriendsService();
         ShowFriendsService showFriendsService = new ShowFriendsService();
@@ -46,6 +48,11 @@ public class HomeUI extends UI {
 
                 case "1":
                     System.out.println("News Feed");
+                    homePage.newsFeed();
+//                    System.out.println("---------------------------------------------------" + "\n" + "Press Enter to return to Home Page");
+//                    System.in.read();
+//                    loadingUI.popProgressBar();
+//                    showHomeUI();
                     break;
                 case "2":
                     System.out.println("My Profile");

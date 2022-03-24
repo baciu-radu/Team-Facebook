@@ -9,15 +9,15 @@ public class User implements GenericEntity {
     private static final String USER_REPOSITORY_PATH = String.valueOf(path);
     private static int newID = 1;
     private int id;
-    private String email;
+    private String emailAddress;
     private String password;
 
     public User () {
     }
 
-    public User(String email, String password) {
+    public User(String emailAddress, String password) {
         this.id = newID++;
-        this.email = email;
+        this.emailAddress = emailAddress;
         this.password = password;
     }
 
@@ -31,7 +31,7 @@ public class User implements GenericEntity {
 
     @Override
     public String toDataBaseFormat() {
-        return String.format("%s;%s;%s", id, email, password.hashCode());
+        return String.format("%s;%s;%s", id, emailAddress, password.hashCode());
     }
 
     @Override
@@ -39,19 +39,23 @@ public class User implements GenericEntity {
         return USER_REPOSITORY_PATH;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public String getPassword() {
+        return password;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + com.facebook.model.User.this.id +
-                ", email='" + email + '\'' +
+                ", emailAddress='" + emailAddress + '\'' +
                 '}';
     }
 }
