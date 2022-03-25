@@ -7,7 +7,8 @@ import java.util.Objects;
 
 public class Message implements Serializable {
 
-    private static int newIdi=1;
+//    private static int newIdi=1;
+
     private final int message_id;
     private int sender_id;
     private int receiver_id;
@@ -26,7 +27,7 @@ public class Message implements Serializable {
         this.sender_id = sender_id;
         this.receiver_id = receiver_id;
         this.message = message;
-        this.message_id= newIdi++;
+        this.message_id= hashCode();
     }
 
 
