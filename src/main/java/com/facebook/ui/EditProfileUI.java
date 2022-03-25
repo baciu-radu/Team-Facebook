@@ -27,7 +27,7 @@ public class EditProfileUI extends UI {
                 "\n" + "\t\t\t\t" + "1 - Name" +
                 "\n" + "\t\t\t\t" + "2 - Age" +
                 "\n" + "\t\t\t\t" + "3 - Sex" +
-                "\n" + "\t\t\t\t" + "-1 - Back to Home Page" +
+                "\n" + "\t\t\t\t" + "4 - Back to Home Page" +
                 "\n" + "\t\t\t\t" + "x - Close" +
                 "\n" +
                 "\n" + "Meta \u00a9 " + yearDate +
@@ -80,7 +80,7 @@ public class EditProfileUI extends UI {
                     loadingUI.popProgressBar();
                     homeUI.showHomeUI();
                     break;
-                case "-1":
+                case "4":
                     loadingUI.popProgressBar();
                     homeUI.showHomeUI();
                     break;

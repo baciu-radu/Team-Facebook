@@ -15,6 +15,7 @@ public class HomeUI extends UI {
     public void showHomeUI() throws IOException, InterruptedException, AWTException {
 
         UI ui = new HomeUI();
+        MainUI mainUI = new MainUI();
         HomePage homePage = new HomePage();
         MyProfileUI myProfileUI = new MyProfileUI();
         FindFriendsService findFriendsService = new FindFriendsService();
@@ -33,6 +34,7 @@ public class HomeUI extends UI {
                 "\n" + "\t\t\t\t" + "4 - Messenger" +
                 "\n" + "\t\t\t\t" + "5 - Show Friends" +
                 "\n" + "\t\t\t\t" + "6 - Find Friends" +
+                "\n" + "\t\t\t\t" + "7 - Log out" +
                 "\n" + "\t\t\t\t" + "x - Close" +
                 "\n" +
                 "\n" + "Meta \u00a9 " + yearDate +
@@ -50,12 +52,8 @@ public class HomeUI extends UI {
                     loadingUI.popProgressBar();
                     System.out.println("News Feed");
                     homePage.newsFeed();
-//                    System.out.println("---------------------------------------------------" + "\n" + "Press Enter to return to Home Page");
-//                    System.in.read();
-//                    showHomeUI();
                     break;
                 case "2":
-//                    System.out.println("My Profile");
                     myProfileUI.showMyProfileUI();
                     System.out.println("---------------------------------------------------" + "\n" + "Press Enter to return to Home Page");
                     System.in.read();
@@ -68,6 +66,7 @@ public class HomeUI extends UI {
                     editProfileUI.showEditProfileUI();
                     break;
                 case "4":
+                    loadingUI.popProgressBar();
                     System.out.println("Messenger");
                     MessageUI.messages();
                     break;
@@ -99,6 +98,9 @@ public class HomeUI extends UI {
                     loadingUI.popProgressBar();
                     showHomeUI();
                     break;
+                case "7":
+                    loadingUI.popProgressBar();
+                    mainUI.showMainUI();
                 case "x":
                     ui.closeApplication();
                     break;

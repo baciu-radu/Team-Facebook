@@ -3,8 +3,10 @@
 3;3;Throw all your anxiety onto him, because he cares about you;0;0
 4;2;All have sinned and fall short of God’s glory...;1;0
 5;1;I can endure all these things through the power of the one who gives me strength.;0;0
-6;3;Trust in the Lord with all your heart, don’t rely on your own intelligence.;1;0
-7;1;I will ask the Father, and he will send another Companion, who will be with you forever.;0;2
+6;3;Trust in the Lord with all your heart, don’t rely on your own intelligence.;2;0
+7;1;I will ask the Father, and he will send another Companion, who will be with you forever.;1;2
+
+
 
 
 

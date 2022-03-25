@@ -139,3 +139,5 @@
 139;rimona@mail.com;rimonapass
 140;rebeca@mail.com;rwebepass141
 141;adi@gmail.com;Parola123+
+142;mimi@yahoo.ro;Parola123+
+143;titi@gmail.com;Parola123+

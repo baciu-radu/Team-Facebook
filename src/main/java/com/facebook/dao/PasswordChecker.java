@@ -15,14 +15,12 @@ public class PasswordChecker {
         listOfPasswords = Files.readAllLines(Paths.get("src\\main\\resources", "UsersTable.txt"));
         String[] passwords = listOfPasswords.toArray(new String[0]);
         String[] passwordElements;
-        Path currentUserIDTable = Paths.get("src\\main\\resources", "CurrentUserIDTable.txt");
 
         for (String pass : passwords) {
 
             passwordElements = pass.split(";");
 
             if (passwordElements[2].equals(password)) {
-                Files.write(currentUserIDTable, passwordElements[0].getBytes());
                 return true;
             }
         }

@@ -28,7 +28,7 @@ public class LoadingUI {
             for (int j = 0; j <= i; j += 2) {
                 sb.append("\u2588");
             }
-            TimeUnit.MILLISECONDS.sleep(50);
+            TimeUnit.MILLISECONDS.sleep(30);
             System.out.print(String.format("%-51s", sb) + " " + i + "%");
             System.out.print("\r");
         }
