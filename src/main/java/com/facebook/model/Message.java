@@ -69,11 +69,11 @@ public class Message implements Serializable {
         if(message.contains("_reply*")){
             String s1 = message.substring(message.indexOf("*") + 1);
             return "\t id= " + message_id +
-                    ", " + MessageUI.getNameFromID(MessageUI.getCurrentUserId()) +": "+
+                    ", " + MessageUI.getNameFromID(sender_id) +": "+
                     '\''+s1.trim() + '\'' ;
         }
         return "\n id= " + message_id +
-                ", " + MessageUI.getNameFromID(MessageUI.getCurrentUserId()) +": "+
+                ", " + MessageUI.getNameFromID(sender_id) +": "+
                 '\''+message + '\'';
     }
 }
