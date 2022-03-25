@@ -138,11 +138,4 @@
 138;sanda@mail.com;sandapass
 139;rimona@mail.com;rimonapass
 140;rebeca@mail.com;rwebepass141
-141;di@gmail.com;Parola123+
-142;radumbaciu@mail.com;Radupass1!
-143;falafel@mail.com;Falafel1!
-144;gigica@mail.com;Gigicapass1!
-145;parmegiano@mail.com;Parmegiano1!
-146;cascaval@mail.com;Cascaval1!
-147;emental@mail.com;Emental1!
-148;roquefort@mail.com;Roquefort!1
+141;adi@gmail.com;Parola123+

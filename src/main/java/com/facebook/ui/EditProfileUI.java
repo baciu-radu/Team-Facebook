@@ -27,6 +27,7 @@ public class EditProfileUI extends UI {
                 "\n" + "\t\t\t\t" + "1 - Name" +
                 "\n" + "\t\t\t\t" + "2 - Age" +
                 "\n" + "\t\t\t\t" + "3 - Sex" +
+                "\n" + "\t\t\t\t" + "-1 - Back to Home Page" +
                 "\n" + "\t\t\t\t" + "x - Close" +
                 "\n" +
                 "\n" + "Meta \u00a9 " + yearDate +
@@ -76,6 +77,10 @@ public class EditProfileUI extends UI {
                     System.out.println("New sex is: " + enterProfileDetailsService.getNewSex());
                     System.out.println("---------------------------------------------------" + "\n" + "Press Enter to return to Home Page");
                     System.in.read();
+                    loadingUI.popProgressBar();
+                    homeUI.showHomeUI();
+                    break;
+                case "-1":
                     loadingUI.popProgressBar();
                     homeUI.showHomeUI();
                     break;

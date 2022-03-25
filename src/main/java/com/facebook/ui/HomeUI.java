@@ -47,15 +47,15 @@ public class HomeUI extends UI {
             switch (option) {
 
                 case "1":
+                    loadingUI.popProgressBar();
                     System.out.println("News Feed");
                     homePage.newsFeed();
 //                    System.out.println("---------------------------------------------------" + "\n" + "Press Enter to return to Home Page");
 //                    System.in.read();
-//                    loadingUI.popProgressBar();
 //                    showHomeUI();
                     break;
                 case "2":
-                    System.out.println("My Profile");
+//                    System.out.println("My Profile");
                     myProfileUI.showMyProfileUI();
                     System.out.println("---------------------------------------------------" + "\n" + "Press Enter to return to Home Page");
                     System.in.read();
@@ -63,6 +63,7 @@ public class HomeUI extends UI {
                     showHomeUI();
                     break;
                 case "3":
+                    loadingUI.popProgressBar();
                     System.out.println("Edit Profile Details");
                     editProfileUI.showEditProfileUI();
                     break;
@@ -71,6 +72,7 @@ public class HomeUI extends UI {
                     MessageUI.messages();
                     break;
                 case "5":
+                    loadingUI.popProgressBar();
                     System.out.println("Show Friends" +
                             "\n" +
                             "---------------------------------------------------" +
@@ -89,6 +91,7 @@ public class HomeUI extends UI {
                     showHomeUI();
                     break;
                 case "6":
+                    loadingUI.popProgressBar();
                     System.out.println("Find Friends");
                     findFriendsService.findFriends();
                     System.out.println("---------------------------------------------------" + "\n" + "Press Enter to return to Home Page");

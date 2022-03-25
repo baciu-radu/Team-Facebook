@@ -76,7 +76,7 @@ public class MessageUI {
 
     public static void mainPoint() throws IOException, InterruptedException, AWTException {
         System.out.println("Main messenger menu:");
-        System.out.println("option 1 = see users ; option 2 = see chats ; option -1 = back ; exit =0");
+        System.out.println("option 1 = see users ; option -1 = back ; exit =0");
         int selection=getIntFromUnwillingUser();
         HomeUI homeUI=new HomeUI();
 
@@ -92,12 +92,12 @@ public class MessageUI {
                     //see users method
                     break;
 
-                case 2:
-                    //System.out.println(getCurrentUserId());
-                    listChats(getCurrentUserId());
-                    System.out.println("if you have no chats yet I suggest to go back and see the users and not choose a user blindly");
-                    toChooseOrNotToChoose();
-                    break;
+//                case 2:
+//                    //System.out.println(getCurrentUserId());
+//                    listChats(getCurrentUserId());
+//                    System.out.println("if you have no chats yet I suggest to go back and see the users and not choose a user blindly");
+//                    toChooseOrNotToChoose();
+//                    break;
 
                 case -1:
                     homeUI.showHomeUI();
@@ -269,7 +269,7 @@ public class MessageUI {
         //listUsers();
         System.out.println("please indicate the id of the user you want to send message to");
         int userNr = ais.nextInt();
-        while (!isValidUserId(userNr)){
+        while (!isValidUserId(userNr) && userNr!=getCurrentUserId()){
             System.out.println("no such user, try again:");
             userNr = getIntFromUnwillingUser();
         }
@@ -404,7 +404,7 @@ public class MessageUI {
         assert pathnames != null;
         for (String pathname : pathnames) {
             // Print the names of files and directories
-            pathname=pathname.replaceFirst(Integer.toString(getCurrentUserId()),"");
+            pathname=pathname.replace(Integer.toString(getCurrentUserId()),"");
             //System.out.println(pathname);
             pathname=pathname.replace("_","");
             pathname=pathname.replace("chat","");
